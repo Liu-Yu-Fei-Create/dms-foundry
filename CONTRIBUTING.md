@@ -18,6 +18,14 @@ open "DMS Foundry.app"
 
 提交 PR 前请确认 `swift test` 与 `build.sh` 都通过。CI 会在 `macos-14` 上跑同样两步。
 
+维护者同步到 GitHub 可以用：
+
+```bash
+scripts/sync.sh "说明这次改了什么"
+```
+
+它会先跑 `swift test`，再 `git add -A && git commit && git push origin main`。
+
 ## 代码约定
 
 - `DMSEngine` 只依赖 Foundation，不 import SwiftUI/AppKit；界面代码放 `DMSFoundry`。

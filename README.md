@@ -10,9 +10,11 @@ MIT 许可，见 [LICENSE](LICENSE)。
 
 > 命名：定名 DMS Foundry。`DMS Designer` 已被同领域 Python 工具包占用（[文档](https://jackdesmarais.github.io/DMS_Designer/index.html) / [仓库](https://github.com/jackdesmarais/DMS_Designer)），故避开。
 
-## 安装
+## 下载
 
-从 [Releases](https://github.com/Liu-Yu-Fei-Create/dms-foundry/releases) 下载 `DMSFoundry-<version>.zip`，解压后把 `DMS Foundry.app` 拖进「应用程序」。
+**➡️ [下载最新版](https://github.com/Liu-Yu-Fei-Create/dms-foundry/releases/latest)**
+
+从 Releases 下载 `DMSFoundry-<version>.zip`，解压后把 `DMS Foundry.app` 拖进「应用程序」。
 
 - 构建为 **ad-hoc 签名、未公证**：首次打开请右键 →「打开」，或执行
   `xattr -dr com.apple.quarantine "DMS Foundry.app"`。
@@ -29,33 +31,20 @@ MIT 许可，见 [LICENSE](LICENSE)。
 
 ## 截图
 
-**文库设计**
-
-![环形质粒图](docs/screenshots/polish-map.png)
-![文库参数](docs/screenshots/polish-params.png)
-![生成与 QC](docs/screenshots/polish-generate.png)
-![导出](docs/screenshots/polish-export.png)
-
-**文库质控**
-
+![文库设计 · 参数](docs/screenshots/polish-params.png)
 ![文库质控](docs/screenshots/qc-module.png)
-
-**筛选方案**
-
 ![筛选方案](docs/screenshots/screening-module.png)
+![筛选分析 · 跨组归一](docs/screenshots/analysis-joint.png)
 
-**筛选分析**
+<details>
+<summary>更多截图（结构映射、环形质粒图、设置）</summary>
 
-![逐组/联合视图](docs/screenshots/analysis-module.png)
-![跨组归一](docs/screenshots/analysis-joint.png)
-![FASTQ 输入](docs/screenshots/analysis-fastq.png)
 ![结构映射](docs/screenshots/structure-map.png)
+![环形质粒图](docs/screenshots/polish-map.png)
+![FASTQ 输入](docs/screenshots/analysis-fastq.png)
+![设置](docs/screenshots/settings.png)
 
-**设置**
-
-![默认值](docs/screenshots/settings.png)
-![命名预设](docs/screenshots/settings-presets.png)
-![外观](docs/screenshots/settings-appearance.png)
+</details>
 
 ## 构建与测试
 
