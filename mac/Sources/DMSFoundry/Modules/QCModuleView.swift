@@ -439,16 +439,12 @@ struct QCModuleView: View {
                                   summary: QCReport.summarize(r, rows: rws), rows: rws)
         }
         let sub = design.variants.first?.sublibrary ?? "SL01"
-        Task.detached {
-            let a = mk("demo_rep1", sub, 1.0)
-            let b = mk("demo_rep2", sub, 0.8)
-            await MainActor.run {
-                sampleResults = [a, b]
-                selectedSample = a.name
-                saveRun(title: "QC demo")
-                loadRuns()
-            }
-        }
+        let a = mk("demo_rep1", sub, 1.0)
+        let b = mk("demo_rep2", sub, 0.8)
+        sampleResults = [a, b]
+        selectedSample = a.name
+        saveRun(title: "QC demo")
+        loadRuns()
     }
 
     private var sampleTable: some View {
@@ -598,8 +594,11 @@ struct QCModuleView: View {
                 return
             }
             let specs = parsed.samples
-            var designs: [String: QCDesign] = [:]
-            for p in planes { if let d = model.qcDesign(for: p.id) { designs[p.id] = d } }
+            let designs: [String: QCDesign] = Dictionary(uniqueKeysWithValues:
+                planes.compactMap { p -> (String, QCDesign)? in
+                    guard let d = model.qcDesign(for: p.id) else { return nil }
+                    return (p.id, d)
+                })
             isRunning = true; errorText = nil
             Task.detached {
                 do {
@@ -613,10 +612,11 @@ struct QCModuleView: View {
                         results.append(QCSampleResult(name: spec.name, sublibrary: spec.sublibrary,
                                                       summary: QCReport.summarize(res, rows: rws), rows: rws))
                     }
+                    let collected = results
                     await MainActor.run {
-                        sampleResults = results
-                        selectedSample = results.first?.name
-                        rollup = Self.rollup(results)
+                        sampleResults = collected
+                        selectedSample = collected.first?.name
+                        rollup = Self.rollup(collected)
                         runCtx = designCtx
                         isRunning = false
                         saveRun(title: "QC \(url.lastPathComponent)")
