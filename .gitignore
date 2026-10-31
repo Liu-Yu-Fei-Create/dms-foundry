@@ -23,3 +23,4 @@ presets.json
 exports/
 /tmp/
 *.log
+legal/software-copyright/out/
