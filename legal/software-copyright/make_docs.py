@@ -21,7 +21,7 @@ OUT.mkdir(exist_ok=True)
 
 SOFTWARE = "DMS Foundry 深度突变扫描文库设计与分析软件"
 SHORT = "DMS Foundry"
-VERSION = "V0.5.0"
+VERSION = "V0.5.1"
 APPLICANT = "刘宇飞"
 DATE = "2026-10-31"
 
