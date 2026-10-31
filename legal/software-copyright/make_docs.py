@@ -327,6 +327,63 @@ def build_manual():
     body(doc, "问：Intel Mac 能否使用？答：可从源码执行 swift build 编译。")
     body(doc, "问：数据存在哪里？答：默认 ~/Library/Application Support/DMSFoundry，可在设置中迁移。")
 
+    chapter("第二部分 设计说明")
+    heading(doc, "10 总体架构", 2)
+    body(doc, "软件分为引擎与应用两层。引擎 DMSEngine 只依赖 Foundation，包含序列解析、坐标换算、密码子表、"
+              "突变枚举、子库切分、组装规划、index 匹配、文库生成、质控计数、分析与导出；"
+              "应用层 DMSFoundry 使用 SwiftUI 构建界面，不包含业务算法。")
+    body(doc, "数据流：质粒序列与注释 → 目标 CDS（编码链上下文）→ 突变枚举（Variant）→ 子库切分（SubLibrary）→ "
+              "组装规划（Golden Gate/Gibson）→ index 分配 → oligo 生成（OligoRecord）→ 导出；"
+              "质控输入 FASTQ 与设计清单，输出计数与对账；分析输入计数矩阵与样本元数据，输出效应。")
+    body(doc, "模块边界通过纯数据类型（Codable）传递，便于测试与持久化；界面只负责状态与呈现。")
+
+    heading(doc, "11 数据模型", 2)
+    table(doc, [
+        ["类型", "职责"],
+        ["Project", "项目：宿主、质粒、目标、参数、组装、筛查方案"],
+        ["Plasmid / Feature", "序列与注释（类型、链、子区段、密码子起点、翻译表）"],
+        ["Target", "突变目标：CDS 与氨基酸区间"],
+        ["LibraryParams", "氨基酸集合、同义/终止/WT、密码子策略与表、步长、随机种子"],
+        ["Assembly", "组装方式、酶、同源臂长度、index 种子"],
+        ["Variant", "单点突变：位置、野生型/突变氨基酸、密码子、来源"],
+        ["SubLibrary", "子库：氨基酸范围、核苷酸偏移与长度"],
+        ["OligoRecord", "最终 oligo：名称、序列、index、overhang、问题列表"],
+    ])
+    body(doc, "所有持久化对象带 schemaVersion；项目以原子写保存到数据目录，避免中断导致文件损坏。")
+
+    heading(doc, "12 设计算法", 2)
+    body(doc, "突变枚举：按目标区间逐密码子生成 19 种氨基酸替换；可选的同义、终止、脯氨酸与随机区变体单独生成，"
+              "统一去重编号。密码子策略支持最优、随机与避开稀有三类，随机数使用可复现的 SplitMix64 流。")
+    body(doc, "组装规划：Golden Gate 的子库边界按密码子对齐搜索，只允许缩短，保证覆盖连续、无缺口、总长不变；"
+              "overhang 由野生型边界序列决定，不可自由挑选，按 T4 连接酶实测保真度评分；"
+              "内部 Type IIS 位点按整条片段扫描，必要时通过同义替换 Refine 消除。")
+    body(doc, "Index 匹配：从冻结表中挑选 15–25 nt 序列，要求与质粒序列无 15-mer 交叉、3′ 端唯一、"
+              "两两不交叉、Tm 差不超过 2 °C；同一子库内成对使用。")
+
+    heading(doc, "13 质控算法", 2)
+    body(doc, "FASTQ 以字节流分块读取，.gz 通过系统 gzip 管道解压，内存恒定；双端先做 overlap merge，"
+              "R2 反向互补后与 R1 找最长重叠（≥20 nt、≤10% 错配），失败时回退单端。")
+    body(doc, "计数使用恒定区锚点定位插入片段，支持反向互补；逐密码子与参考比较，单点差异查表命中设计变体，"
+              "其余归入错误谱（野生型、未知单点、多点、未锚定）。")
+    body(doc, "对账输出观测率、零计数、中位覆盖、Gini 与每子库指标；诊断规则把指标翻译为阻断/警告与下一步动作。")
+
+    heading(doc, "14 分析算法", 2)
+    body(doc, "富集比：log2(((c_sel+p)/N_sel)/((c_in+p)/N_in))，伪计数 p=0.5；方差用 delta 法，"
+              "合并采用逆方差加权，SE=1/√Σw；同义变体作为经验 null 计算 z 与 p，再做 BH-FDR。")
+    body(doc, "跨组归一：先以各组 WT 对照的平均效应为基线平移，再合并；组间相关在共享变体上计算 Pearson r。"
+              "结构映射把变体位置映射到 PDB/mmCIF 的 CA 原子，按效应着色。")
+
+    heading(doc, "15 数据存储与迁移", 2)
+    body(doc, "默认数据目录为 ~/Library/Application Support/DMSFoundry，包含 projects、runs.sqlite 与 presets.json。"
+              "设置中可迁移到自定义目录：复制 → 校验 → 删除旧数据，迁移时显示进度，完成后自动重启。")
+
+    heading(doc, "16 测试与验证", 2)
+    body(doc, "引擎包含 37 条单元测试，覆盖坐标换算、GenBank/FASTA/SnapGene 解析、密码子表、突变枚举、子库切分、"
+              "长度预算、随机数、酶扫描、overhang 评分、组装规划、质控、Refine、index 分配、生成与导出、"
+              "双端合并、样本表校验与联合分析。")
+    body(doc, "另有命令行自检：DMS_SELFTEST、DMS_QC_SELFTEST、DMS_ANALYSIS_SELFTEST、DMS_ANALYSIS_FASTQ_SELFTEST，"
+              "用于验证打包后的资源加载与端到端流程。")
+
     chapter("附录 A 快捷键")
     table(doc, [
         ["快捷键", "功能"],
@@ -358,6 +415,66 @@ def build_manual():
     chapter("附录 E 技术支持")
     body(doc, "问题反馈：GitHub Issues。提交时请附 macOS 版本、软件版本（设置页底部）与复现步骤；"
               "涉及数据的请提供脱敏后的最小样例。")
+
+    chapter("附录 F 质控与分析规格（节选）")
+    spec = ROOT / "docs" / "qc-analysis-spec.md"
+    if spec.exists():
+        for raw in spec.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("![") or line.startswith("|"):
+                continue
+            if line.startswith("###"):
+                heading(doc, line.lstrip("# ").strip(), 2)
+            elif line.startswith("##"):
+                heading(doc, line.lstrip("# ").strip(), 2)
+            elif line.startswith("#"):
+                heading(doc, line.lstrip("# ").strip(), 2)
+            elif line.startswith(("- ", "* ")):
+                bullet(doc, line[2:].strip())
+            elif line.startswith("```"):
+                continue
+            else:
+                body(doc, line.replace("**", "").replace("`", ""))
+
+    chapter("附录 G 工程与构建")
+    body(doc, "源码结构：mac/Package.swift 定义 DMSEngine 与 DMSFoundry 两个目标；"
+              "mac/Sources/DMSEngine 为纯 Swift 引擎；mac/Sources/DMSFoundry 为 SwiftUI 应用；"
+              "Tests/DMSEngineTests 为引擎测试；tools 为离线数据校验脚本。")
+    body(doc, "构建命令：cd mac && swift test；CONFIG=debug ./build.sh 生成 DMS Foundry.app；"
+              "发布使用 release.sh 打包、签名并生成更新清单。")
+    body(doc, "持续集成：GitHub Actions 在 macos-14 上执行 swift test 与 build.sh。")
+
+    chapter("附录 H 问题代码")
+    table(doc, [
+        ["代码", "含义"],
+        ["oligo.internal-site", "oligo 内出现 Type IIS 酶切位点"],
+        ["oligo.homopolymer", "同聚物长度超阈值"],
+        ["oligo.length", "oligo 长度超出合成上限"],
+        ["oligo.gc", "GC 含量异常"],
+        ["qc.stop", "终止密码子质检变体相关问题"],
+        ["qc.synonymous", "同义突变质检变体相关问题"],
+        ["qc.proline", "脯氨酸质检变体相关问题"],
+        ["qc.random", "随机区质检变体相关问题"],
+        ["overhang.low-fidelity", "overhang 保真度低于阈值"],
+        ["overhang.palindromic", "回文 overhang，禁止使用"],
+    ])
+
+    chapter("附录 I 术语表")
+    table(doc, [
+        ["术语", "说明"],
+        ["DMS", "深度突变扫描"],
+        ["CDS", "编码序列"],
+        ["Type IIS", "在识别位点外侧切割的限制性内切酶"],
+        ["Golden Gate", "利用 Type IIS 酶的一锅法组装"],
+        ["Gibson", "利用同源臂与连接酶的组装方法"],
+        ["Overhang", "酶切后产生的黏性末端"],
+        ["Index", "子库扩增/拆分的短序列标签"],
+        ["CPM", "每百万 reads 的计数"],
+        ["BH-FDR", "Benjamini–Hochberg 错误发现率"],
+        ["WT", "野生型"],
+        ["Sublibrary", "按区段切分后的子库"],
+        ["Refine", "用同义替换消除内部酶切位点"],
+    ])
 
     path = OUT / "DMS-Foundry-用户手册.docx"
     doc.save(path)
