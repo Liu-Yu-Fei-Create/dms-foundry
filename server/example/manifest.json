@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "latest": {
+    "version": "0.2.1",
+    "build": 3,
+    "minOS": "14.0",
+    "publishedAt": "2026-10-30",
+    "notes": {
+      "zh": "测试版本：接通更新检查与签名校验",
+      "en": "Test release: update check + signature verification"
+    },
+    "artifacts": [
+      {
+        "arch": "arm64",
+        "url": "http://127.0.0.1:8799/stable/DMSFoundry-0.2.1.zip",
+        "sha256": "6724271f6c2944e26c63eae1a75febe0ec7fe29037d9891cf79995038a6d4c3f",
+        "signature": "SdrPASDt+YBou9Gmvvkg33Rd0h86b25+DqgYCPEEBM664nBuNGNj93k9zWmzCkHyScHY497OmPAvFnjOoAMrCA==",
+        "size": 716175
+      }
+    ]
+  }
+}

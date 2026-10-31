@@ -1,0 +1,267 @@
+{
+  "id": "ecoli",
+  "name": "Escherichia coli K-12 (W3110)",
+  "source": "Kazusa Codon Usage Database",
+  "source_url": "http://www.kazusa.or.jp/codon/cgi-bin/showcodon.cgi?species=316407&aa=1&style=N",
+  "retrieved": "2026-10-30",
+  "unit": "per_thousand",
+  "notes": "Kazusa 'Escherichia coli W3110' summary table (W3110 is a K-12 derivative strain): 4332 CDS / 1,372,057 codons. Frequencies are Kazusa per-thousand (count/total*1000), rounded to 1 decimal. 64 codons present; sum = 1000.0. Stop codons (TAA/TAG/TGA) carry aa='*'. Note: Kazusa also lists a literal 'Escherichia coli K12' entry (species=83333) with only 14 CDS / 5,122 codons; it was rejected as too small (e.g. UAG frequency 0.0) and its values disagree noticeably with genome-wide K-12 data. This table is the statistically representative K-12 codon usage.",
+  "codons": {
+    "AAA": {
+      "aa": "K",
+      "freq": 33.6
+    },
+    "AAC": {
+      "aa": "N",
+      "freq": 21.6
+    },
+    "AAG": {
+      "aa": "K",
+      "freq": 10.3
+    },
+    "AAT": {
+      "aa": "N",
+      "freq": 17.6
+    },
+    "ACA": {
+      "aa": "T",
+      "freq": 6.9
+    },
+    "ACC": {
+      "aa": "T",
+      "freq": 23.5
+    },
+    "ACG": {
+      "aa": "T",
+      "freq": 14.4
+    },
+    "ACT": {
+      "aa": "T",
+      "freq": 8.8
+    },
+    "AGA": {
+      "aa": "R",
+      "freq": 2.0
+    },
+    "AGC": {
+      "aa": "S",
+      "freq": 16.1
+    },
+    "AGG": {
+      "aa": "R",
+      "freq": 1.1
+    },
+    "AGT": {
+      "aa": "S",
+      "freq": 8.7
+    },
+    "ATA": {
+      "aa": "I",
+      "freq": 4.2
+    },
+    "ATC": {
+      "aa": "I",
+      "freq": 25.2
+    },
+    "ATG": {
+      "aa": "M",
+      "freq": 27.8
+    },
+    "ATT": {
+      "aa": "I",
+      "freq": 30.4
+    },
+    "CAA": {
+      "aa": "Q",
+      "freq": 15.4
+    },
+    "CAC": {
+      "aa": "H",
+      "freq": 9.8
+    },
+    "CAG": {
+      "aa": "Q",
+      "freq": 29.0
+    },
+    "CAT": {
+      "aa": "H",
+      "freq": 13.0
+    },
+    "CCA": {
+      "aa": "P",
+      "freq": 8.4
+    },
+    "CCC": {
+      "aa": "P",
+      "freq": 5.5
+    },
+    "CCG": {
+      "aa": "P",
+      "freq": 23.4
+    },
+    "CCT": {
+      "aa": "P",
+      "freq": 7.0
+    },
+    "CGA": {
+      "aa": "R",
+      "freq": 3.5
+    },
+    "CGC": {
+      "aa": "R",
+      "freq": 22.3
+    },
+    "CGG": {
+      "aa": "R",
+      "freq": 5.4
+    },
+    "CGT": {
+      "aa": "R",
+      "freq": 21.0
+    },
+    "CTA": {
+      "aa": "L",
+      "freq": 3.8
+    },
+    "CTC": {
+      "aa": "L",
+      "freq": 11.1
+    },
+    "CTG": {
+      "aa": "L",
+      "freq": 53.1
+    },
+    "CTT": {
+      "aa": "L",
+      "freq": 11.0
+    },
+    "GAA": {
+      "aa": "E",
+      "freq": 39.7
+    },
+    "GAC": {
+      "aa": "D",
+      "freq": 19.1
+    },
+    "GAG": {
+      "aa": "E",
+      "freq": 18.0
+    },
+    "GAT": {
+      "aa": "D",
+      "freq": 32.2
+    },
+    "GCA": {
+      "aa": "A",
+      "freq": 20.1
+    },
+    "GCC": {
+      "aa": "A",
+      "freq": 25.7
+    },
+    "GCG": {
+      "aa": "A",
+      "freq": 33.9
+    },
+    "GCT": {
+      "aa": "A",
+      "freq": 15.2
+    },
+    "GGA": {
+      "aa": "G",
+      "freq": 7.9
+    },
+    "GGC": {
+      "aa": "G",
+      "freq": 29.8
+    },
+    "GGG": {
+      "aa": "G",
+      "freq": 11.0
+    },
+    "GGT": {
+      "aa": "G",
+      "freq": 24.7
+    },
+    "GTA": {
+      "aa": "V",
+      "freq": 10.9
+    },
+    "GTC": {
+      "aa": "V",
+      "freq": 15.3
+    },
+    "GTG": {
+      "aa": "V",
+      "freq": 26.3
+    },
+    "GTT": {
+      "aa": "V",
+      "freq": 18.2
+    },
+    "TAA": {
+      "aa": "*",
+      "freq": 2.0
+    },
+    "TAC": {
+      "aa": "Y",
+      "freq": 12.2
+    },
+    "TAG": {
+      "aa": "*",
+      "freq": 0.2
+    },
+    "TAT": {
+      "aa": "Y",
+      "freq": 16.1
+    },
+    "TCA": {
+      "aa": "S",
+      "freq": 7.0
+    },
+    "TCC": {
+      "aa": "S",
+      "freq": 8.6
+    },
+    "TCG": {
+      "aa": "S",
+      "freq": 8.9
+    },
+    "TCT": {
+      "aa": "S",
+      "freq": 8.4
+    },
+    "TGA": {
+      "aa": "*",
+      "freq": 0.9
+    },
+    "TGC": {
+      "aa": "C",
+      "freq": 6.4
+    },
+    "TGG": {
+      "aa": "W",
+      "freq": 15.2
+    },
+    "TGT": {
+      "aa": "C",
+      "freq": 5.1
+    },
+    "TTA": {
+      "aa": "L",
+      "freq": 13.8
+    },
+    "TTC": {
+      "aa": "F",
+      "freq": 16.5
+    },
+    "TTG": {
+      "aa": "L",
+      "freq": 13.6
+    },
+    "TTT": {
+      "aa": "F",
+      "freq": 22.2
+    }
+  }
+}

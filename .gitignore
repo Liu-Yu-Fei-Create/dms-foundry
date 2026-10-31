@@ -1,0 +1,25 @@
+# 构建产物
+mac/.build/
+mac/DMS Foundry.app/
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+
+# 私钥与本地数据
+server/keys/*.pem
+server/keys/*.key
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+presets.json
+
+# 系统与编辑器
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# 导出与临时
+exports/
+/tmp/
+*.log

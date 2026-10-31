@@ -1,0 +1,6173 @@
+{
+  "version": 1,
+  "generated": "2026-10-30",
+  "seed": 20261102,
+  "count": 1024,
+  "length": 20,
+  "constraints": {
+    "gc_min": 0.4,
+    "gc_max": 0.6,
+    "max_homopolymer": 3,
+    "min_hamming": 6,
+    "unique_3prime": 10,
+    "tm_min": 55.0,
+    "tm_max": 65.0,
+    "tm_formula": "SantaLucia 1998 unified NN: Tm = dH/(dS + 1.987*ln(CT/4)) - 273.15 + 16.6*log10([Na+]), CT=0.25uM, [Na+]=50mM",
+    "no_leading_g": true,
+    "forbidden_sites": [
+      "GGTCTC",
+      "CGTCTC",
+      "GAAGAC",
+      "GCTCTTC"
+    ],
+    "forbidden_sites_both_strands": true,
+    "max_inverted_repeat_len": 3
+  },
+  "notes": "Greedy construction over 50242 uniformly random 20-mer candidates (seed 20261102); 1036 passed all per-sequence filters and 1024 were accepted after the cross-sequence checks. All 1024 requested indices were found; no constraint was relaxed. Per-candidate rejection counts: inverted_repeat=16751, no_leading_G=12538, gc_window=9793, tm_window=4838, homopolymer=4357, duplicate_6mer=342, restriction_site:GAAGAC=105, restriction_site:GTCTTC=97, restriction_site:GGTCTC=94, restriction_site:GAGACG=93, restriction_site:CGTCTC=89, restriction_site:GAGACC=69, restriction_site:GAAGAGC=26, restriction_site:GCTCTTC=14, cross:min_hamming=9, cross:unique_3prime=3. Tm uses SantaLucia 1998 unified nearest-neighbour parameters with CT=0.25 uM and [Na+]=50 mM, no terminal-initiation correction; the 3' 10 nt uniqueness is implied by the Hamming>=6 rule and is checked independently anyway. Inverted repeats are tested on all 4 nt windows of the sequence (any window that is the reverse complement of another window, itself included), which subsumes the palindrome ban and also covers every longer inverted repeat. Restriction sites GGTCTC, CGTCTC, GAAGAC and GCTCTTC are excluded on both strands. Realised GC 0.50-0.60 (mean 0.584) and Tm 55.0-59.8 C (mean 56.4). The 55 C Tm floor is the binding filter under these conditions, so the accepted set concentrates towards the top of the GC window; a GC of 0.40 is unreachable here without relaxing Tm or changing the stated salt/concentration assumptions.",
+  "indices": [
+    {
+      "id": "IDX-0001",
+      "seq": "TGCGGTATCAACGCTCGGTG",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0002",
+      "seq": "CGCAGCATTGGAGATGACCG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0003",
+      "seq": "TTCGGAGCCACGCAATCACA",
+      "gc": 0.55,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0004",
+      "seq": "CCCAGAACAGTCCACGCACA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0005",
+      "seq": "ACTGAAGCGGTCGGTTGAGG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0006",
+      "seq": "ATACGGTGGACGAGGGCAGA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0007",
+      "seq": "TGCTCTGTGGACCTCCTGGT",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0008",
+      "seq": "AAACCTGCCCATTCCCTGCG",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0009",
+      "seq": "AAAGGGACCGCTCTCACACC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0010",
+      "seq": "TTCTGCCCGAATGAGCCAGG",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0011",
+      "seq": "CGTCACATACAGCGTCGGCA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0012",
+      "seq": "AGCGAGGGCAAGCGATGTTG",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0013",
+      "seq": "CGTCTGACTGGTGCGAAAGC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0014",
+      "seq": "TTCCGATTGCTCCCACCGTC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0015",
+      "seq": "CGCCATACTACACCGCTCGT",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0016",
+      "seq": "CTTGTCACCACGCCCAGGTT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0017",
+      "seq": "TCCCATCACGCTCAACTGGA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0018",
+      "seq": "ACGGGACTTTCCGATTCGCC",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0019",
+      "seq": "CATCATCGGAACGCTGCGGA",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0020",
+      "seq": "CACAGCGAACCCACCTAAGC",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0021",
+      "seq": "AGCCGAAGAACCACCACACA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0022",
+      "seq": "CCCGTTCATTACCTGAGGGC",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0023",
+      "seq": "TCCGCTCGGTTGGTTCCCTT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0024",
+      "seq": "TCGCTCACAGAACGGGACTT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0025",
+      "seq": "CAACGAAATGCCACTTGCCG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0026",
+      "seq": "CCTGCGAAGAACGGGCTGAA",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0027",
+      "seq": "TCCGATACGCCGAATACCGC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0028",
+      "seq": "TGACTGAGGGCGAGCGGTAT",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0029",
+      "seq": "ACTGGGCGGTGGGTTTCAAG",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0030",
+      "seq": "AATCTAAGGGCGTCTGGGCG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0031",
+      "seq": "CGCCTAAACGGGCAGATACC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0032",
+      "seq": "TGGGTGCCCTCTTTGAGTGC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0033",
+      "seq": "ACACAGCACAATAGCAGCCC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0034",
+      "seq": "CCGCATCCCAGTATCACGCT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0035",
+      "seq": "CACGGAACTGTGGGTCGGTA",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0036",
+      "seq": "ATCCTTTGCCCGTCTGTGTG",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0037",
+      "seq": "CACCGTCTGCCACACAACAG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0038",
+      "seq": "AAATCTCCGCATCCCGAAGC",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0039",
+      "seq": "TCCCGATGACCTCCAATGGT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0040",
+      "seq": "TTGGGCGGTGGACTGATAGG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0041",
+      "seq": "TCACTCCCTCGTCGGCAAAT",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0042",
+      "seq": "TTCCCGCCAGTGAGATGCCA",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0043",
+      "seq": "TCTCGCCAAACACACCACGC",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0044",
+      "seq": "CGTGCCCTAAGAGCCACCTA",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0045",
+      "seq": "TACTGCGACGAAACGGGACG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0046",
+      "seq": "ACGAGCGACAGCCTGCTACA",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0047",
+      "seq": "CACATCGGTGCTTGGTTTGC",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0048",
+      "seq": "ATGCCAGAGGTTTGTCGGGA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0049",
+      "seq": "AGGGCTCGTAGCACCAGAAC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0050",
+      "seq": "ACCGCCAGGGTTATGAGGAA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0051",
+      "seq": "ACGCCGACATTCTGTTGCCG",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0052",
+      "seq": "AACGGTTTGAGGCAGGCTGG",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0053",
+      "seq": "AAACGGAGTCCTGCGTGCGT",
+      "gc": 0.6,
+      "tm": 58.8
+    },
+    {
+      "id": "IDX-0054",
+      "seq": "ATCCGCTGGTCCACTAAGCC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0055",
+      "seq": "AGTAGACCTTTCGGCGGACG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0056",
+      "seq": "AACCCGAAAGAATGCGACGC",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0057",
+      "seq": "TAGCGGCGGAGGCAAACGAA",
+      "gc": 0.6,
+      "tm": 58.7
+    },
+    {
+      "id": "IDX-0058",
+      "seq": "CCGCACCTAACGAAGAAGCG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0059",
+      "seq": "TGCCACTCACTCTCCCAACA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0060",
+      "seq": "ACCCAGGGAACGGATTGCGA",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0061",
+      "seq": "TTATCCCTCTGGGCTGGTGC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0062",
+      "seq": "AGCGGTGAGTGACCCGTCTA",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0063",
+      "seq": "TGGAGATGCTTGGTGGGAGC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0064",
+      "seq": "TGTCGCAGGCTCCTCAATCT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0065",
+      "seq": "CTCCCGACCACGCACTTTGA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0066",
+      "seq": "CTGGACTGGCGTAGTTTCGC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0067",
+      "seq": "CGGGCACATAGATGAGGGCT",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0068",
+      "seq": "TAAGGAAGGCGAGCGACACA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0069",
+      "seq": "CACGAAGGGCAGCAGTCTCA",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0070",
+      "seq": "CTGGCTGCCTTCGTTGTGAC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0071",
+      "seq": "TGCGTTCCAATCTGACGGGC",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0072",
+      "seq": "CTGGCTTAGGGAACCTTGCC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0073",
+      "seq": "AACTCCGAACACGGTCCAGA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0074",
+      "seq": "CATCTGAGGTTGGCATCGGC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0075",
+      "seq": "TCAGACGGCGAGGTAAGCCA",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0076",
+      "seq": "CACCTGTAACTGAGGCGACG",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0077",
+      "seq": "ACTCACGCAAATGCCAGGAG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0078",
+      "seq": "AGACTGCGGTTGTGGTGAGC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0079",
+      "seq": "TTAGTGCCTCACCCTCCCAA",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0080",
+      "seq": "ACAATCCCAACCGCTCACGA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0081",
+      "seq": "CGCACAGTGGTAGGCAAAGT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0082",
+      "seq": "AGTGCTGAACGGCAACTCCC",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0083",
+      "seq": "TGCCGCCGCACTCCAACAAT",
+      "gc": 0.6,
+      "tm": 59.7
+    },
+    {
+      "id": "IDX-0084",
+      "seq": "TTTCCGCATCCCGTGGCACA",
+      "gc": 0.6,
+      "tm": 59.2
+    },
+    {
+      "id": "IDX-0085",
+      "seq": "TCAGTCTCGGAATGCGGCTG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0086",
+      "seq": "CGCCAGGCAGACATCAAGCA",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0087",
+      "seq": "TCGGATTTCGCAGAGCACCT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0088",
+      "seq": "CAGCATTGGGCTTGGCTCTG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0089",
+      "seq": "ACGCCGTGAGCCTGACTTTA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0090",
+      "seq": "CTTGTAATCCGCCTGAGCCG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0091",
+      "seq": "TCCGCAGACATCAGACCAGC",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0092",
+      "seq": "TCGTGGTATCCGTAAGGCGG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0093",
+      "seq": "CGCAGACCCTGTCGCTTTGA",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0094",
+      "seq": "CTGCTTCCTGACTGCCCAGA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0095",
+      "seq": "ACTTTATGCGTGGGATGCCC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0096",
+      "seq": "TGGACAATCGCACCAGCCTG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0097",
+      "seq": "TGGAGCAGCCTTCACTTCGG",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0098",
+      "seq": "CCGACCACACCAGATTGCTC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0099",
+      "seq": "ACAGTCCCGAAAGTGCTCCC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0100",
+      "seq": "AGGGACGAGACAATGGACGC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0101",
+      "seq": "TCACTGTGCCAAGCCCGAGA",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0102",
+      "seq": "CGCATTCACAAGGAGGGTGG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0103",
+      "seq": "CCCACACATCGCAGGAGAGA",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0104",
+      "seq": "TTGGACTCAAGGGAGGGCAT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0105",
+      "seq": "ACTAACGCTTCACGCCCGCT",
+      "gc": 0.6,
+      "tm": 58.6
+    },
+    {
+      "id": "IDX-0106",
+      "seq": "ACGAGCCAACTGCTTAGCGT",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0107",
+      "seq": "ACTCTCCACCGCCTTCCAAA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0108",
+      "seq": "CACGGTTTCTCCCTTGCGGA",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0109",
+      "seq": "TTGCTTCCTTCGCTGTGCTC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0110",
+      "seq": "TAACGAGGGCGTAGGAAGCG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0111",
+      "seq": "AGTATGAGCGAGGCGGAAGC",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0112",
+      "seq": "TTCGGTCGGCTATGTGGGAA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0113",
+      "seq": "CGGTGACGGCTTTCAGGTTC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0114",
+      "seq": "TGCTTCCCTTGTTGCCGATG",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0115",
+      "seq": "ATCACTCCTGGCACACCGCA",
+      "gc": 0.6,
+      "tm": 58.4
+    },
+    {
+      "id": "IDX-0116",
+      "seq": "TGCCCGACATCCTGTGGAAA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0117",
+      "seq": "CGGATTGGTCCTAAGCCGAC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0118",
+      "seq": "CTCTACAAGCGGTGGGACAC",
+      "gc": 0.6,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0119",
+      "seq": "TGCGTATGGGCACTGTTGCT",
+      "gc": 0.55,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0120",
+      "seq": "CAATAACGGCTGACGCCCTT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0121",
+      "seq": "ACACGAAACTTGCCCTGGCG",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0122",
+      "seq": "AGCACTCTCGGTGGGAAACC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0123",
+      "seq": "ACTGTGACCCTTTCCCGACC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0124",
+      "seq": "ATAAGAGGGCGGCGTCCAGT",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0125",
+      "seq": "CTGACATTACGCCCACACCG",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0126",
+      "seq": "TCGGACAATCCCGCTACGGA",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0127",
+      "seq": "CCTCGGGCTGGTTCGTAGAT",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0128",
+      "seq": "AGGGTATGGCTCTCTCGGGT",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0129",
+      "seq": "CGCAAGTGAGCGGACTGAAA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0130",
+      "seq": "TCTACACGCAGGCTACCGCT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0131",
+      "seq": "TCATCCGAGCAGGCTAAGGG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0132",
+      "seq": "AGGACACCACAGGTCAGTCG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0133",
+      "seq": "CGAGTGGGCTCTATTCGGGA",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0134",
+      "seq": "ATTGCCGTTCCCGAGCGAAT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0135",
+      "seq": "CAGGAGGTGCCTTTCGCCTT",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0136",
+      "seq": "TCCAACACCCTGCGTATGGT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0137",
+      "seq": "TGTCGCTGTTCGGTGGTCTG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0138",
+      "seq": "TCTCTGCGAGGCTTGCTGTT",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0139",
+      "seq": "TGGCTCCTCGTGTGTCATCA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0140",
+      "seq": "CGGTAGCCAGCAAGCGTGAA",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0141",
+      "seq": "TCCAAGCATAGCACCTGCCA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0142",
+      "seq": "AGAGTTGGTGCGGCGAACAA",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0143",
+      "seq": "TCGCTGCTGAGAGCCACTTA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0144",
+      "seq": "TGCGGACTCCTCTTAGGCGA",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0145",
+      "seq": "CCATCTCACCCGTCGTTGGT",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0146",
+      "seq": "CCAGGGACAGTCATCGGTCT",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0147",
+      "seq": "ACCCGCACTCTGGCTTATCG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0148",
+      "seq": "CGTGGGAGCCTGGTCAGTAA",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0149",
+      "seq": "TCGTTGCGTATGGCGACTGT",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0150",
+      "seq": "AAAGTGTCGGGTCCGTTCCT",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0151",
+      "seq": "AGCACGCCGACCAAGTAGAA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0152",
+      "seq": "AACTGTGGGTCGCTATTGCG",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0153",
+      "seq": "TGAGGAGCATCAACCCAGCG",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0154",
+      "seq": "TTGGAGGTCTGAATGCGGGA",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0155",
+      "seq": "CCGAGAACTTTCGCTGGCGT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0156",
+      "seq": "TTGAGTTTCCGCATCTGCCC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0157",
+      "seq": "ATCCTGCGAGAGTTGCCCTC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0158",
+      "seq": "CTCAAACGCCACTGACAGCC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0159",
+      "seq": "TGTCTGGCACCTTGGTCCGT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0160",
+      "seq": "CGCAGAGTCCTAAACCGAGC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0161",
+      "seq": "ACTGGGAACTCCATCAGCCA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0162",
+      "seq": "TGGCGAACTGCGATTGAGAC",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0163",
+      "seq": "TCGCTTCTCCCGCCTTTCGT",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0164",
+      "seq": "TAGCGAGCGGGTTTCCCTAC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0165",
+      "seq": "TCTCATAGTCTGGCGACGGC",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0166",
+      "seq": "CTGTCGCCAGGATTGTAGGC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0167",
+      "seq": "ATCCCAGCACGCCCAGGTAT",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0168",
+      "seq": "CTGGATTGAGCCTGGAGTGC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0169",
+      "seq": "TGCCACGAGCCGTTGTAGAT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0170",
+      "seq": "CCGTGGCGATTGTTCCGTCT",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0171",
+      "seq": "TGTGTCGCTCGCATTAGGGT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0172",
+      "seq": "ACGGACCACTCGTGAGAAGC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0173",
+      "seq": "CCCTCCGAGAGAACAGGTGA",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0174",
+      "seq": "ATCAATCTCCCAGGGCAGGC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0175",
+      "seq": "TGAGGCGAGAAAGGTGCCAG",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0176",
+      "seq": "ACCGTCAGCGGGTGTTCTAA",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0177",
+      "seq": "TCAAAGCGTCCGCCTGAGAT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0178",
+      "seq": "CCCTTACCATCGCTCCTTGC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0179",
+      "seq": "ACCGAGCGTCCCAATCATCT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0180",
+      "seq": "CAGAGCCCTGGTCCAAATCG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0181",
+      "seq": "CGTGCGAGCATCCTCAAGTC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0182",
+      "seq": "TGTCCGCCAGCACTACGAGA",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0183",
+      "seq": "CGCCGCAATACGGTTCAGAT",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0184",
+      "seq": "AAGGCATCAGGGAGCACCAG",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0185",
+      "seq": "CTCTAAACAGACGCCGAGCG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0186",
+      "seq": "CATAGGCAATGAGGGCGACG",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0187",
+      "seq": "ATGATGCTTGCCGCCCAACT",
+      "gc": 0.55,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0188",
+      "seq": "AACGGACACACCTGGCACTC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0189",
+      "seq": "ACCCAGTCAGAGTTGGCAGG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0190",
+      "seq": "TCGGCGAGCCTCACATCGTT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0191",
+      "seq": "TAGTTTCAAGGGTGCGTGCG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0192",
+      "seq": "TTCACCAACCACGAGGGCAT",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0193",
+      "seq": "ACCGCAGCACATTCTCTTCG",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0194",
+      "seq": "CGGCAATACAGACTGGTGCG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0195",
+      "seq": "AAGTGCCAATGCGACGCCTG",
+      "gc": 0.6,
+      "tm": 58.4
+    },
+    {
+      "id": "IDX-0196",
+      "seq": "ATCACTCCTCCCTGTGGCGT",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0197",
+      "seq": "AACGGGACCTCGCCTGACTT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0198",
+      "seq": "CTGGATTACGCTGAGCCGAC",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0199",
+      "seq": "TGCTGCGGTTCCCAGTTGAA",
+      "gc": 0.55,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0200",
+      "seq": "ATCGGTTCTGGCACTCCCTC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0201",
+      "seq": "ATGAAACGGCGTCCGATTCG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0202",
+      "seq": "CAGGAATGCTTGGGAAGGGC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0203",
+      "seq": "CTGACAGCCCGCCCATAGTT",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0204",
+      "seq": "TGCGACATCTTAGCAGCGTG",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0205",
+      "seq": "TTGGGAATCGTAGGCGGCTC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0206",
+      "seq": "AGAGGACAACGCCCGACTTT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0207",
+      "seq": "ATGGTCTACAGTGCGTCGCT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0208",
+      "seq": "TCCCATTCATCCCGCACCAA",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0209",
+      "seq": "TGTGAGCAGGCATCTGTCCA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0210",
+      "seq": "AGTTCTCGTCAGCCGTCGGA",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0211",
+      "seq": "TCCAACAGCACAGCCAACGG",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0212",
+      "seq": "AGGTATCCCGATGCGTGGAG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0213",
+      "seq": "TCTACGCAACAGGGAGCGAA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0214",
+      "seq": "CGCAAGTGCCTGTGCCATTG",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0215",
+      "seq": "AATCAATGCCCTGTCGGCTC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0216",
+      "seq": "TACAAGGGTGTGGTGCTGCC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0217",
+      "seq": "CACGCCTCTCGGCTAAACTC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0218",
+      "seq": "CTTTGGCGTCCCGTATTGCG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0219",
+      "seq": "ATCAGGTCCCGTTGCGAGAT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0220",
+      "seq": "TCAGAGAACCGCCTTCGCAC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0221",
+      "seq": "TCATCCACCGCTGCCACTGA",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0222",
+      "seq": "CCTGGTAGATGACCCGCTGA",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0223",
+      "seq": "TCCAGGCGGCAACTTAGGGA",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0224",
+      "seq": "AGCCACAACGCCGCTTAGGA",
+      "gc": 0.6,
+      "tm": 58.6
+    },
+    {
+      "id": "IDX-0225",
+      "seq": "CACCGAACCCACACAAGGCT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0226",
+      "seq": "AGTCCTTGGGAAGCAGGGAT",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0227",
+      "seq": "AGCGACAACCCTGAAGCACG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0228",
+      "seq": "TGCCACGCCGTTTGAGACTC",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0229",
+      "seq": "TGTCAGAGGGCAACGCCGAA",
+      "gc": 0.6,
+      "tm": 58.5
+    },
+    {
+      "id": "IDX-0230",
+      "seq": "CACTGAGCGAGAAACGGTCC",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0231",
+      "seq": "AGCGTGGGACCAGGAGCATT",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0232",
+      "seq": "CATCCAATCGCCCACGCAAT",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0233",
+      "seq": "TCGCATTTCGGAGCGTAGGT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0234",
+      "seq": "CACTCAGTAGCGACGCAAGG",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0235",
+      "seq": "CGTCCCAAGGTCGCAAGTTT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0236",
+      "seq": "ACCAATCGGTAGCAGGAGGG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0237",
+      "seq": "ATTGGTGGTCCTCTCGGCGT",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0238",
+      "seq": "TATGAAAGCGGCAGGACGGT",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0239",
+      "seq": "TGACAGCCAGCCTTGGTTTC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0240",
+      "seq": "ACCATTCCAGGCAACAGCGT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0241",
+      "seq": "CTTGCGAGCGGCATAAGTGT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0242",
+      "seq": "AGCCACCAGAGTGACGCAAC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0243",
+      "seq": "CAGCCCGAACAAACGACAGC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0244",
+      "seq": "ACGATGTCCTCAGCACCAGC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0245",
+      "seq": "TTGGCTCTTTCGCTGGCTGG",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0246",
+      "seq": "CGAATGCTACCCTCCACACC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0247",
+      "seq": "CGGTGTCTGACGGTTTGAGG",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0248",
+      "seq": "CCATACTTCGTCTGCTGCGG",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0249",
+      "seq": "ACTCGTGATACGCTCGGTGG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0250",
+      "seq": "TGCGGAAGGTAGTCCCGAGT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0251",
+      "seq": "AGCGGGAATGGGCAACACCT",
+      "gc": 0.6,
+      "tm": 59.0
+    },
+    {
+      "id": "IDX-0252",
+      "seq": "TGGCAGCCCGTGTCATCTTG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0253",
+      "seq": "CAACTGGTGGTCACGGCAGA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0254",
+      "seq": "CGTGGTCACTCCTGCGACTT",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0255",
+      "seq": "CTACAGGCACAGCCACTCCA",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0256",
+      "seq": "TGGGATTCGGCTACCACTCC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0257",
+      "seq": "AGAGCGGTCGTTACCACAGT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0258",
+      "seq": "CTGCCCAGCACTTAGACAGG",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0259",
+      "seq": "AGCATCCGAACCCACAGTCT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0260",
+      "seq": "TCTCGTTCTGCTGGCGTTCG",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0261",
+      "seq": "AATAGGCGGTGGACAGGTCG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0262",
+      "seq": "ATCATCGCCTCCAACCTCGC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0263",
+      "seq": "ACCCACGGTCCTACACAAGC",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0264",
+      "seq": "TAGTGGACAACTCGGCGTGA",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0265",
+      "seq": "TACGCCATCACGGGTGCTAT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0266",
+      "seq": "TGAGTGCTGGTGTGTGCCAC",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0267",
+      "seq": "TGGGACAGGAACAACGCTCA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0268",
+      "seq": "CAGGTGCCCGACAGGTTCAT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0269",
+      "seq": "ACGGAGTCACGCCTGAACAT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0270",
+      "seq": "TGCGACTGGGTAGTGGGCTA",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0271",
+      "seq": "TTGAGCACCTATCCTCCGCC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0272",
+      "seq": "CACCTGCGGTTCACACAGTT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0273",
+      "seq": "TTTGCCGAGCATCCCTCCTA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0274",
+      "seq": "ATCCCAGCGAAAGGTGCCTC",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0275",
+      "seq": "TTACCGTATCAGCGTCGCCG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0276",
+      "seq": "TCCAGGGAACGCCTTTGGTA",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0277",
+      "seq": "TTCGTGAGCGAGACTGGGAA",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0278",
+      "seq": "TTGCCGCCCTAATGCGTAGT",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0279",
+      "seq": "ATTGGCGACGGTGGCATCAG",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0280",
+      "seq": "ACCTCTACTTGGGCAGCCAC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0281",
+      "seq": "ATTGTGCCCTGTGTGAGCGT",
+      "gc": 0.55,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0282",
+      "seq": "AGAACCAGAACGGCGAATGC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0283",
+      "seq": "TGGGTTGGGACCAGTCACGA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0284",
+      "seq": "AGAAGGTTGACGGTGCGACG",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0285",
+      "seq": "ATCTGTGGCGGGAGGAGGTA",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0286",
+      "seq": "AGGGCTCTTGTGGGCTGACT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0287",
+      "seq": "TTCGTGCCTAAGACCCTGCG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0288",
+      "seq": "TCGTCAAAGCCAGCATCCCT",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0289",
+      "seq": "CCCGCCCACATTGTCAGAGT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0290",
+      "seq": "CTCTGGACCTGGGACAGTCT",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0291",
+      "seq": "AATCCACGGGCATAGGGCTT",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0292",
+      "seq": "CCGCCGTTCTCTGGAATAGC",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0293",
+      "seq": "CAGGGTGTGGGTTCGTGGAA",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0294",
+      "seq": "CGCTGCCTGGTTGGTCTACA",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0295",
+      "seq": "AGCCTACCAAACCTCCACCC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0296",
+      "seq": "ATGAAATCGCCGACGCATCC",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0297",
+      "seq": "TAGCGTCGGCTTACAACCCG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0298",
+      "seq": "TGCCTTCAACCGCCAAACCC",
+      "gc": 0.6,
+      "tm": 58.4
+    },
+    {
+      "id": "IDX-0299",
+      "seq": "AAGAGGCGTGGAACCGTCCT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0300",
+      "seq": "ACCTTCACCACCAAGCCTCT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0301",
+      "seq": "CGATGTGCTTTGCCCGAGTG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0302",
+      "seq": "CCGAGTGTGACCGACTGAAC",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0303",
+      "seq": "AGGGTTGGAGCCAGTTACCG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0304",
+      "seq": "TCGGCTGTTGTCTTGGCACA",
+      "gc": 0.55,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0305",
+      "seq": "AGAGTGTGCCGTTACCCGAG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0306",
+      "seq": "CGGTGGTTGCCTGTAGGTTC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0307",
+      "seq": "AACCCGCTCAAGCACTTCCA",
+      "gc": 0.55,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0308",
+      "seq": "ACCGCTTGACCAGATGCTCG",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0309",
+      "seq": "ACGCCGCCTCCGTCTTAGAA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0310",
+      "seq": "TTGCCCTCTTGTCCGCCAGA",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0311",
+      "seq": "CGTTTACCAGAAGCCGCCTG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0312",
+      "seq": "TGACAAGCGGCAAGGTGTGT",
+      "gc": 0.55,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0313",
+      "seq": "CCTGGACTCTCAGCCGTGAT",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0314",
+      "seq": "AGCGGTGAGTGCTTGTGAAC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0315",
+      "seq": "ACGCTTTCCTGTTGTCGCAG",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0316",
+      "seq": "TGGCACCTGGTTCCGACATA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0317",
+      "seq": "AACGGCACCACGACCACTTG",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0318",
+      "seq": "TTGCCTCCGCTCCACCTTAC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0319",
+      "seq": "TGGTGCGGCGTTGTGATAGA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0320",
+      "seq": "CTGTGGGAAGGCTTTGCGAA",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0321",
+      "seq": "AGAACCGAGGCGACCAACAC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0322",
+      "seq": "CACAGGGCGTCACCGATTTG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0323",
+      "seq": "ACGGATTCGGACCCTCAGGT",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0324",
+      "seq": "CGCATACCTCGGGAGAAGCA",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0325",
+      "seq": "TGGTGACGATGGCTCCAGTG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0326",
+      "seq": "AGCGACACTCCGTTTGCCTG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0327",
+      "seq": "AGCCAAACGGTGGACCAACG",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0328",
+      "seq": "CTTCTCGGCTGTCACCCAAC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0329",
+      "seq": "ATCCCTCCTGAGCCACATCC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0330",
+      "seq": "CTTCGCCTGTGCCCTCAAAT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0331",
+      "seq": "ATCCAGTCGTCCCATCGGAG",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0332",
+      "seq": "TACGCACCAGGGAGTAACCG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0333",
+      "seq": "TCGCACGGCTAACTGGACTC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0334",
+      "seq": "CTTCCGCTGCGAGAGTATGC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0335",
+      "seq": "TGGGCTGTGTCAATGGACCG",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0336",
+      "seq": "TCCCGAACGCACTACCTTGA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0337",
+      "seq": "ACTCGCAGCCATAGGGAGAC",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0338",
+      "seq": "AGGATGCGACACTGCCCGTT",
+      "gc": 0.6,
+      "tm": 58.6
+    },
+    {
+      "id": "IDX-0339",
+      "seq": "TGCCTGTTTACGCTGCCCAC",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0340",
+      "seq": "TTCGCCAACAGCCTACGGAC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0341",
+      "seq": "CGCTCGGTTGCTGTTTGCGA",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0342",
+      "seq": "AGCCGCAACTTGGGTCTACC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0343",
+      "seq": "CGGCTTGAAGGTGGGTTGAT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0344",
+      "seq": "TTCGGCAACGCTGTCCTTGT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0345",
+      "seq": "ACTTTGCCTCCGACTGCGTA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0346",
+      "seq": "AGAGCCAACCCAGGCGTTCA",
+      "gc": 0.6,
+      "tm": 58.5
+    },
+    {
+      "id": "IDX-0347",
+      "seq": "CGCCGTGAGAAAGACTCGTC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0348",
+      "seq": "AAGGTCTTTGTGAGCGTGCC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0349",
+      "seq": "CCTCAAATGGTCCGAGCCAC",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0350",
+      "seq": "TCAACTCGGGTAGGAGCGTG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0351",
+      "seq": "CCTGAGGGTTGGGCTGATTC",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0352",
+      "seq": "ATGCTTGCGTGATGCTCCAC",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0353",
+      "seq": "TTGCTTACCCGTGAGCCGAA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0354",
+      "seq": "TTTCTCCTGCGTCGCTCGTC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0355",
+      "seq": "TCGGATGCTGAGGCTTCGGA",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0356",
+      "seq": "TAGGACCCGTTTCACCGCAC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0357",
+      "seq": "ACGCTGTGGCAGGACATCCA",
+      "gc": 0.6,
+      "tm": 58.4
+    },
+    {
+      "id": "IDX-0358",
+      "seq": "TCTATGGGACAAGCCGTGGC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0359",
+      "seq": "TCCGATGGTCCCAAACGCAC",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0360",
+      "seq": "ATGTGGCAGGAACTGAACGC",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0361",
+      "seq": "ACCAACCAGGGAATCAGCGA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0362",
+      "seq": "AGATGAGGCATACGGGCGAA",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0363",
+      "seq": "AGCACAGTGTCCGTAGCGAC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0364",
+      "seq": "AGCGTTAGTGGTCCTTCCGC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0365",
+      "seq": "TATGAGATGGCGGGCAGCCT",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0366",
+      "seq": "ACGAGATGTGGCGTGTCCGA",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0367",
+      "seq": "ACGAGTCCCTGCTCTGTAGC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0368",
+      "seq": "CCTGGGTCTGACGGCTTCAT",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0369",
+      "seq": "ATTCCGAGTTGAACCCGCCA",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0370",
+      "seq": "ACGCCTTGGTCGCTTGATGA",
+      "gc": 0.55,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0371",
+      "seq": "CTGGAAACACGCTCTCGGAC",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0372",
+      "seq": "CTGCTGTGACAACGGGTAGG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0373",
+      "seq": "CCCGCCTCGCAGCATTCTTT",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0374",
+      "seq": "AGTGGGCATTCCGATGTTGC",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0375",
+      "seq": "ACAATGCCGACAGGACTGGA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0376",
+      "seq": "CGAGTGAGTCGGACCCAAGA",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0377",
+      "seq": "ACCCTTCGGAAACGCTACCG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0378",
+      "seq": "AATGCCGTTCGCTTCGCAAG",
+      "gc": 0.55,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0379",
+      "seq": "AGGACCGACATCTACGAGGC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0380",
+      "seq": "TGCCTCCAGGGTTGTAGGTG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0381",
+      "seq": "AACCCACCACACAGGCAGTA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0382",
+      "seq": "AGACTGCGAGTGAGAGGCAT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0383",
+      "seq": "AGCCTGTGATGGTGCGTTGT",
+      "gc": 0.55,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0384",
+      "seq": "TATGCGTGGCGTTGCTCCTC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0385",
+      "seq": "AGCACCGACTTCTCCAGTGT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0386",
+      "seq": "AACTCGGTCACGGGTTGCTC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0387",
+      "seq": "CATCGCATTGCCGACTGACG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0388",
+      "seq": "TGTGCCGTGTGGGACAGAGA",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0389",
+      "seq": "CCGCAAACACCCATCAGTCG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0390",
+      "seq": "AGATTCGGCGTCAAACCAGC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0391",
+      "seq": "ACTTGGGACCATCACCGCAG",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0392",
+      "seq": "CGCCTAAATGCTTTGCGGCA",
+      "gc": 0.55,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0393",
+      "seq": "TTCAGCGAGGAGCGAACTGT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0394",
+      "seq": "TGCTCAGGCTTGGGCATTGC",
+      "gc": 0.6,
+      "tm": 58.5
+    },
+    {
+      "id": "IDX-0395",
+      "seq": "CCTGGACCAACAACGCTCAC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0396",
+      "seq": "TTGAATGCTCCGCTCCCTCT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0397",
+      "seq": "AGTAGCGGTCTTTGGCAACG",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0398",
+      "seq": "ACATCACCCTTGCGTCGCTA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0399",
+      "seq": "AACGGCAAGGCTCACCTCGT",
+      "gc": 0.6,
+      "tm": 58.5
+    },
+    {
+      "id": "IDX-0400",
+      "seq": "CGGCTGGTGTTCCCTGTTTC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0401",
+      "seq": "AAGGGAGAGCCCATTAGCGA",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0402",
+      "seq": "TCAGAGGTGGGTATCCCTGG",
+      "gc": 0.6,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0403",
+      "seq": "CTCAATGGGACCGTAGCGTG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0404",
+      "seq": "TACGCAGGCAACGATGACCT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0405",
+      "seq": "CGACGGGTATGGCATCACCT",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0406",
+      "seq": "TGCCAGCCTCCCAGTTTAGA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0407",
+      "seq": "CGGATGATACCCGCTGTGTC",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0408",
+      "seq": "CCACACTGGGAAGGTCAGCA",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0409",
+      "seq": "CGAGTGCGTAATCCAGCCTG",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0410",
+      "seq": "CACTGGTGGTTTGGCTCGTG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0411",
+      "seq": "TGGTGGAGTGATGGGCACAG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0412",
+      "seq": "AGCCACATTTGCCACGCAGG",
+      "gc": 0.6,
+      "tm": 58.6
+    },
+    {
+      "id": "IDX-0413",
+      "seq": "TCGCATTGTTGCTTGGACCC",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0414",
+      "seq": "ACCGTTTCCGCCTCGTGAAC",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0415",
+      "seq": "TGGTGCTCCCACAAGTAGCC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0416",
+      "seq": "TTGACAGGCGGGCGTTCATC",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0417",
+      "seq": "ATAGGTCGCTCGCACTCGTT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0418",
+      "seq": "CCGCCAAACAATCCCGTGTC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0419",
+      "seq": "TGCCCAGTATCCCTTGGCGA",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0420",
+      "seq": "CTATGATGCCCAGGGACTGC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0421",
+      "seq": "AACGCTTCGTGTGCCAGGCT",
+      "gc": 0.6,
+      "tm": 59.2
+    },
+    {
+      "id": "IDX-0422",
+      "seq": "TGCCTCTGCTCGGTATGGAC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0423",
+      "seq": "CCAAGGCGTGGTAACGAAGG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0424",
+      "seq": "CGGCACTCTCTCCAACGACA",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0425",
+      "seq": "AACCTCCCGCCAAAGTGGAA",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0426",
+      "seq": "CGGTAACGCAGGTAAACCCG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0427",
+      "seq": "TCCCAGAGGCGGATGGTCAT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0428",
+      "seq": "ATGTCCGCTGCTGTAGTTGC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0429",
+      "seq": "CGCCTGATGGACTGGTGATG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0430",
+      "seq": "ACTCGCACCTACACATCCGC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0431",
+      "seq": "CACTCTCGCTGCCGTGAACT",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0432",
+      "seq": "CGCAAACCATCCGATAGCCG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0433",
+      "seq": "AGCGGAAGTGTTTGCCAGTG",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0434",
+      "seq": "TGATTAGGCACACGGACGGG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0435",
+      "seq": "ATGCGAGGCGTGAACTCCAA",
+      "gc": 0.55,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0436",
+      "seq": "AACAAGAACGAGCCACCTGC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0437",
+      "seq": "AGGAGGATGTGCTTGACCCA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0438",
+      "seq": "CCAGGCACAGCGTGAGAATC",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0439",
+      "seq": "CGGACCCACTTGTGAACGAG",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0440",
+      "seq": "TAAGAAACGCACGCCTCACG",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0441",
+      "seq": "TATTGGGTTTCGTGGGCTGC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0442",
+      "seq": "CTCCCAGACCGAACTACCCT",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0443",
+      "seq": "TATGCGTTGCCAAAGCAGCC",
+      "gc": 0.55,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0444",
+      "seq": "ACCCGCAAGCGAGATAGAGG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0445",
+      "seq": "CGTAATCCCTCTGCCGCACA",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0446",
+      "seq": "ACCTCTTGGGACAGGAGCAA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0447",
+      "seq": "TGGGCAAGGGCATCACTCCT",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0448",
+      "seq": "TGTTCTCAGCAGTGGTCGGG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0449",
+      "seq": "TCGTCCACAAAGCCTCGCTC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0450",
+      "seq": "AGGTCGGGAGAGAAGGCAAG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0451",
+      "seq": "CCTGGAACCTCGGCGATTTG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0452",
+      "seq": "TCATCCACGCCTGCGGTAGA",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0453",
+      "seq": "AGGGCTTTACACGGAAGGGT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0454",
+      "seq": "TGCTACTCGGCAGATGGGCA",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0455",
+      "seq": "CCGCAAGGTGTTGTCTCACA",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0456",
+      "seq": "TCGGCTCATCAGAGGCAGTC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0457",
+      "seq": "CGACGGAGGTGCTTGATTCG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0458",
+      "seq": "TTCACAAGTGCCAGGCGGAT",
+      "gc": 0.55,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0459",
+      "seq": "CAGGTTACCAACTGCGTGGC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0460",
+      "seq": "CGCCCTGCGATTACTCGTTC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0461",
+      "seq": "CACAGTTGGCGGAAGTTCGG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0462",
+      "seq": "CAACCATCCGCACCGTCCAT",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0463",
+      "seq": "CCAACGGGTGCCCATCATCT",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0464",
+      "seq": "CGTCCCTCTAACGGGTGTCT",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0465",
+      "seq": "ACGACTTTGCCCAGCCGCAT",
+      "gc": 0.6,
+      "tm": 59.5
+    },
+    {
+      "id": "IDX-0466",
+      "seq": "TTCTTGGCTCCCTTGTCGCT",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0467",
+      "seq": "AGGAGGCACCAGGATTCCCT",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0468",
+      "seq": "CTTCCCTCGCACGCCAAACT",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0469",
+      "seq": "AAACAATGGCTCGGCAGCAG",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0470",
+      "seq": "AATCCCAAGCCTGGTGCGGA",
+      "gc": 0.6,
+      "tm": 58.7
+    },
+    {
+      "id": "IDX-0471",
+      "seq": "ACCAAGCACGCCACAGTCGT",
+      "gc": 0.6,
+      "tm": 58.9
+    },
+    {
+      "id": "IDX-0472",
+      "seq": "CACATTGCCACGCAGACAGG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0473",
+      "seq": "CCTGTCGTTCTGAAGCCCGT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0474",
+      "seq": "ATCAGTGGGCGAACCAGAGG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0475",
+      "seq": "AGCCTGCGGTAATGGGAACC",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0476",
+      "seq": "CGGGTTAGGGCTGGTCAATC",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0477",
+      "seq": "CCCTCGTCTGGGAATGGTCT",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0478",
+      "seq": "AACACCCACACTTCTGCCCA",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0479",
+      "seq": "CCGACTTTGAAGGTGCGTGT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0480",
+      "seq": "ACAACCTGTTCGCCCTGACG",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0481",
+      "seq": "ACCTGACTCCGACGCACAAT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0482",
+      "seq": "CGACATTGGGTTTCTGCCCT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0483",
+      "seq": "TCCCTGTTCCCATCACGCTT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0484",
+      "seq": "ACTGCCCATTAGCCACGACT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0485",
+      "seq": "CGCCACACCAAAGACACCGT",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0486",
+      "seq": "AACACAATGACCTCCGTGCC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0487",
+      "seq": "CCGTCAGCACCATCGGAAAC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0488",
+      "seq": "ACTACTCCCGTCGTGTCCGT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0489",
+      "seq": "CCCGCTTCGTGACGGTTTGT",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0490",
+      "seq": "TAGTTCCGAGAGGGCGATGC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0491",
+      "seq": "CTGAGCACGCTGTGAATCCG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0492",
+      "seq": "CTCCTGTTGCGGCTCTTTCC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0493",
+      "seq": "TGCTTGGAAACTCGCACCGT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0494",
+      "seq": "CAACAATGCGTGTAGCGTGC",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0495",
+      "seq": "TGGGTCCTTTCATCTGCGGG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0496",
+      "seq": "CTACGCATACGCCCGAGGTT",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0497",
+      "seq": "CCATCAGGCACTTGGGCGAA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0498",
+      "seq": "ACTCGGCTCCATTCTGGCAT",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0499",
+      "seq": "CGTCGTGTTGGGTAGGGTGT",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0500",
+      "seq": "ACCGCTGCGAATAACCACAG",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0501",
+      "seq": "AGCGATAACTCGTTTGCGGG",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0502",
+      "seq": "ATTGCCTCGCAGACTGTGGA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0503",
+      "seq": "CCGTTCACCTCCTGTATGCC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0504",
+      "seq": "ATCGGGAGTTGGTGTGGGCA",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0505",
+      "seq": "TCTCCTCCAGCCGTCCAAAG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0506",
+      "seq": "ACTGGGAAGGCTCAGCATCA",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0507",
+      "seq": "CTTGGGTTCCGCCGAATAGG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0508",
+      "seq": "TGAAGGTGCGGCAGGAGACT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0509",
+      "seq": "ACCGCTCCCGTTGAGGATAA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0510",
+      "seq": "AGAACCGTGCCCTGGGAGTA",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0511",
+      "seq": "ATCGTGGAGGGCGTAAGCCT",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0512",
+      "seq": "TTGTTGGAGGAGGGCTGGGT",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0513",
+      "seq": "TTCTTCCCTCGTCAGCCCGT",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0514",
+      "seq": "AAGTATCGCCGCTCCGTGAG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0515",
+      "seq": "TGACGCAGGGCAGCACTGTA",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0516",
+      "seq": "TGCGAACCTCCCAGTCGTCT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0517",
+      "seq": "TATCACCACCTCGGAAGCGT",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0518",
+      "seq": "TCCCGTCCGCCGCAATAAGA",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0519",
+      "seq": "TTTGCGTGCCATTGCCTGGT",
+      "gc": 0.55,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0520",
+      "seq": "ATGGCGACATCACCTGAGCA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0521",
+      "seq": "ATGCCTTGCGGGTGGTGAAG",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0522",
+      "seq": "TGATGGCGTGACTGGCTACG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0523",
+      "seq": "TGCGTCCCGAAATGCTCCAG",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0524",
+      "seq": "ATTCGGCTACTTGCGTCGGA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0525",
+      "seq": "AAGAGGTGCGAGGGCGATTC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0526",
+      "seq": "CCCACAACGCCTTCCACAGT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0527",
+      "seq": "TGCTCCACACGGTTGAACGG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0528",
+      "seq": "ATTGCCGCAGTTCCTCACGG",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0529",
+      "seq": "CCGCTGAATGGTCCTTGGTC",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0530",
+      "seq": "TTGCGGTGAGGAAACTGGCA",
+      "gc": 0.55,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0531",
+      "seq": "TGCGGAGGTATTGGAGCCCT",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0532",
+      "seq": "TTATGCGAACAGGCTGCCCA",
+      "gc": 0.55,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0533",
+      "seq": "TCAGGTTCCACGCAGCAAGG",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0534",
+      "seq": "TGTCAGCACGGGACCGACTT",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0535",
+      "seq": "TAGGGTTCTGCTCCCACGAC",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0536",
+      "seq": "TGAGCAAGTGCGGTATTCGC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0537",
+      "seq": "CGCTGTTTCTCACGGTGTCG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0538",
+      "seq": "TAGCCTTCCCGCATCCGTTA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0539",
+      "seq": "CAAGTGGTGGAAATCGCCGT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0540",
+      "seq": "AGGGTCCGTGGCTAAATGCC",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0541",
+      "seq": "CCACGACAGTCCTTGGCTGA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0542",
+      "seq": "TTGTCTCGGACCCACTGTGC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0543",
+      "seq": "ATTTCTCGCTCATCAGCCGC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0544",
+      "seq": "AGAGGTGGGCTCAGAGTCGT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0545",
+      "seq": "ACCAGTCAGGAGTCGGACAC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0546",
+      "seq": "ATAGTGCCCGCCATAGCCGA",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0547",
+      "seq": "CTTGCCGAAAGCGAGCGATT",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0548",
+      "seq": "ATTCAGCACCCAGTCGGACA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0549",
+      "seq": "TGCTCGCATACCTTCGCTGC",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0550",
+      "seq": "AGTGCCTGGGTGGGTTGTCT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0551",
+      "seq": "CAAGTTGGCACTGAGGTCCC",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0552",
+      "seq": "ATGACCGTCCTTCCAGCGTG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0553",
+      "seq": "ACGGCTTACTCACTCCTCCC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0554",
+      "seq": "TACCAGCCACCGATGCCTTC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0555",
+      "seq": "TACCATCGCCACTCGCACTC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0556",
+      "seq": "TGGGCTTGAAGGGACAACGC",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0557",
+      "seq": "TGCGGCTGGTTTACAGTGCC",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0558",
+      "seq": "CCGCAGCCCTAATCTGGGAA",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0559",
+      "seq": "TACCTGCCGTCTATCGCCTG",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0560",
+      "seq": "TGGTCGCTTACCTGGAGCCA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0561",
+      "seq": "AGAGCGTGCGTCACTCAAGG",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0562",
+      "seq": "CGCCCTGGATAATAACGCCC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0563",
+      "seq": "CGTCGTCCTGGCAATCCTTG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0564",
+      "seq": "CCGCAGTGGAGCCAGATTGA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0565",
+      "seq": "TTGCGGCGGCTCTGTTAGGA",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0566",
+      "seq": "TTACGGAGTCGCAGGGTTCA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0567",
+      "seq": "TCAACCATCGCCTTCCGCAC",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0568",
+      "seq": "ATTCGGCTACTCCGCAGCAT",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0569",
+      "seq": "ACTGGTCGCTCGCTTGTGTC",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0570",
+      "seq": "ACACAGGACCCGTAAGGCGA",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0571",
+      "seq": "CCTCTCGTATCTCGGTGGCT",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0572",
+      "seq": "TCAACCGCCTACGGCAACAA",
+      "gc": 0.55,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0573",
+      "seq": "AGCAGACCAGCGTTCGGAGT",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0574",
+      "seq": "CCGCAAACAACGGCTCGTAT",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0575",
+      "seq": "TCTCCACTCGCTACCCACGA",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0576",
+      "seq": "CGGACCCAACCTTAGTCGCT",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0577",
+      "seq": "CCATTCGCTGACTCGCCACT",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0578",
+      "seq": "TCTGCCTCTGTTCGTCGCAA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0579",
+      "seq": "CACGGCTTGAAGTGTGGAGG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0580",
+      "seq": "TGGTTGCGAATGAGCACGAG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0581",
+      "seq": "AGGGAACGGCAACAGCGGAA",
+      "gc": 0.6,
+      "tm": 58.9
+    },
+    {
+      "id": "IDX-0582",
+      "seq": "TTGCCCAGGAGCGATGGCTA",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0583",
+      "seq": "ACGGAGAGGATTGTCCCAGC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0584",
+      "seq": "CGTCGTTTCCTGGGTAAGCC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0585",
+      "seq": "TTGCCTCGTAGACCCTGGTT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0586",
+      "seq": "TTGCGGAAAGCCCTCCCTAA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0587",
+      "seq": "TGGACAAGGTGGTGCTACGA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0588",
+      "seq": "TGTTGGGAGCCGAGGTTTGT",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0589",
+      "seq": "TCGCTTTACGCCCAGGGATA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0590",
+      "seq": "TTGGCTTGCTGCCTTCATCC",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0591",
+      "seq": "ATGGCGAGTCTGCTGAGTCC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0592",
+      "seq": "TTTCGCTTGAGGCTGGGAAG",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0593",
+      "seq": "ACTCACAGGCTGGAGCGTTG",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0594",
+      "seq": "TTGAACCGAAGGCTGCTTGC",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0595",
+      "seq": "TAGAGTGCGGTGCTTGGTGC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0596",
+      "seq": "CAGATTCGCACACCCGCAAC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0597",
+      "seq": "ATCGGGAGGCTGCTTCTGTT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0598",
+      "seq": "TGCGATTAGGTGCCTCGTGG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0599",
+      "seq": "AGCCCGTGCTATCTGATGGC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0600",
+      "seq": "CGGGCAACATACGCACAGGT",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0601",
+      "seq": "AACCCGTTTCCCGCCGCAAT",
+      "gc": 0.6,
+      "tm": 59.8
+    },
+    {
+      "id": "IDX-0602",
+      "seq": "CAATCGGTGGCTCGCTTGGA",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0603",
+      "seq": "CGGCTGAATGGCTACCAGGT",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0604",
+      "seq": "CGTGTCGGCTCTCGTGCTTA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0605",
+      "seq": "CACGGGTCGGTTTCCTTGTG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0606",
+      "seq": "TGGACGGGTGGCTCTGATTG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0607",
+      "seq": "CCAGCCTTGGGCGAATGAAG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0608",
+      "seq": "AAAGGTCCAAGGGATTGCGG",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0609",
+      "seq": "CGTCCGATTCCCTTGGGTGT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0610",
+      "seq": "CGCCCTAAGACTTCACGGCA",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0611",
+      "seq": "AAATCAACGAAGCCCGCTCG",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0612",
+      "seq": "TACCGACTGCCCTGTCCTAC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0613",
+      "seq": "CAAGGTGCGGTTCCTCCGAT",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0614",
+      "seq": "ATCAGCGAGTCCAACCGCAT",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0615",
+      "seq": "CCGAAGTGCCTGAAGCCATT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0616",
+      "seq": "AAGTTGGACCACACGCCGCT",
+      "gc": 0.6,
+      "tm": 59.0
+    },
+    {
+      "id": "IDX-0617",
+      "seq": "AGCCTACTCTCGCTCACCAG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0618",
+      "seq": "CGGAAGAGAGCACGGGCTAT",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0619",
+      "seq": "ACCTGCTGTCCACCTGTCAT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0620",
+      "seq": "TGACCTCGGCAGGCGACTTT",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0621",
+      "seq": "CCAGAACCGAACTCACCAGG",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0622",
+      "seq": "ATTCGGTGTGGAGGTGTCGC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0623",
+      "seq": "AACCGCTTGGTGTGGTCGCA",
+      "gc": 0.6,
+      "tm": 59.2
+    },
+    {
+      "id": "IDX-0624",
+      "seq": "TCTGGTCCCGTAAGGTCGCA",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0625",
+      "seq": "TGTAACCGCTGCGTCGGACA",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0626",
+      "seq": "AGGCTGCTGAACAGTGCCCT",
+      "gc": 0.6,
+      "tm": 58.6
+    },
+    {
+      "id": "IDX-0627",
+      "seq": "CCACCCTCACGCTACGATGA",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0628",
+      "seq": "TGCCACCGACTTCCATACGA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0629",
+      "seq": "TGCGGTCCCGTATCGGAATC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0630",
+      "seq": "CTTTGTCGCCACCAGGCTTG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0631",
+      "seq": "TGGGTCCGAATGTGCTGGTT",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0632",
+      "seq": "CCAGTGACCTTGTGGACGAC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0633",
+      "seq": "TCGTAAAGGGCTGTCGCCTG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0634",
+      "seq": "ACCGTGACTCGCTGTCTGAG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0635",
+      "seq": "CCGATGCCTCAACACCTCGT",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0636",
+      "seq": "TCGCCTCTTCTCGTCACCCT",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0637",
+      "seq": "ACCCGCAACCCATCAGGCAT",
+      "gc": 0.6,
+      "tm": 59.0
+    },
+    {
+      "id": "IDX-0638",
+      "seq": "CGTCGCAGGGAAAGAAGCGT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0639",
+      "seq": "CCCAACTGCGTCCAATACGG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0640",
+      "seq": "CACGATGGGTGCTCAGGTGT",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0641",
+      "seq": "ACAGATTCCCTCCCACCCGT",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0642",
+      "seq": "TGAGCACGCACGAGGTTTGC",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0643",
+      "seq": "TGGTCAGGCTGCGGCTTAGA",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0644",
+      "seq": "TTGGACAGCCACCGACTCAC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0645",
+      "seq": "AATCAGGGTCACGCCACGAC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0646",
+      "seq": "CGGTTGAGGCGGGTATCCAA",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0647",
+      "seq": "AAGTATCCGAGGCTCCGTCG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0648",
+      "seq": "AGAGTCTGTCCGAGTGAGGC",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0649",
+      "seq": "CGACAGACCGACCCGATGAT",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0650",
+      "seq": "TTCGCCCTTCTGCTGCTACC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0651",
+      "seq": "TCAGAGGAAGATTGGCGGCG",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0652",
+      "seq": "CGGACCGCAGATAACACCAC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0653",
+      "seq": "TCATTTCTGGCAACGCACGG",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0654",
+      "seq": "CGCTTTAGGCGGCAGGTGAA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0655",
+      "seq": "CTGTGACCCACCAGCGTAAC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0656",
+      "seq": "ACCTCTATCGTGCCGTTGGT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0657",
+      "seq": "CGCCAGGTAATAGCAGCACC",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0658",
+      "seq": "TCACAGGAGTGCCCACCACA",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0659",
+      "seq": "CAGTGGGTCGTTCCGTGTTC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0660",
+      "seq": "AGCCAGTTAGCACACCACCC",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0661",
+      "seq": "TGGTATCCTGACGCCGTAGC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0662",
+      "seq": "TACTCCCGACGAGGGCACAT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0663",
+      "seq": "CCTGCTCTATCCTCGTGGGA",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0664",
+      "seq": "CGATGGGTCTACCGTTCAGC",
+      "gc": 0.6,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0665",
+      "seq": "AGCCACCCTTATTCGCTCGT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0666",
+      "seq": "CGGTAGGAATGTCGTGTCGC",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0667",
+      "seq": "TGCCGCACGACATACAAGTG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0668",
+      "seq": "CCTCCGCCAGATTGTTGCCA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0669",
+      "seq": "TTCCTTGCCTGACCAGCCTA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0670",
+      "seq": "CTGCCGCCTCCATTACCATC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0671",
+      "seq": "AGGCTTACAGAGGGAACGGG",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0672",
+      "seq": "AGTTTCGGGTCGCCCAAATG",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0673",
+      "seq": "CAAGGCAACCCTCATTCCCG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0674",
+      "seq": "ATCAGCCCACTGCCCATACG",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0675",
+      "seq": "ATCGGGTCGCCGTTACACGA",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0676",
+      "seq": "ATGGGAGGTTGCCGTAAGCG",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0677",
+      "seq": "ATGGAAACAACAGGCGGGCT",
+      "gc": 0.55,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0678",
+      "seq": "CCGCATAGGTCCCTGAAACC",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0679",
+      "seq": "AGGAAAGGTCACGGGCTTGC",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0680",
+      "seq": "TCCTCCCATCCAATCCTCGG",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0681",
+      "seq": "TTCCCTCACGCTATCGCAGA",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0682",
+      "seq": "CCACCCAGGGACAGGACATT",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0683",
+      "seq": "CTCCGTGAGCAGCCTATCCA",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0684",
+      "seq": "TCGGACCATCACTCCCAGTC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0685",
+      "seq": "TATGTGTGCCGTCCTCTGGG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0686",
+      "seq": "ACGATGTGCCATTAGCGGGC",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0687",
+      "seq": "CTGGTAGTGCCCGTGGAATG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0688",
+      "seq": "ATCTTCGCCGAGAGTGAGGC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0689",
+      "seq": "TCCTTACGACCACGAGCCAG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0690",
+      "seq": "CAAGGGCAGGAAGCGGTATG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0691",
+      "seq": "CCTCCGAGCAGACATCCAGA",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0692",
+      "seq": "TCCTGGATTGGCGATTGCGG",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0693",
+      "seq": "TGACGGCTTGCGTAACGGTG",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0694",
+      "seq": "TTGGGAGTGTGCCCTCAGCA",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0695",
+      "seq": "CCGTATGTCACGAGCCCTTG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0696",
+      "seq": "AGAAAGCGAGAAGGCGAGCA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0697",
+      "seq": "AGAACGGACACGCCCGAATG",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0698",
+      "seq": "CTGAACCGTAGGGCAGAACG",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0699",
+      "seq": "ATCAACAGTCGGCATTCGGC",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0700",
+      "seq": "TAGGTCGGGAACTGCCATCC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0701",
+      "seq": "AACCGCACGGCTTCAAAGAC",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0702",
+      "seq": "CAGTTGTTCGCAGTCGGCTG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0703",
+      "seq": "ATCGGGCACTCAACACACCC",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0704",
+      "seq": "AGAGTGGAATAGGGCAGGGC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0705",
+      "seq": "ATCCGACGCTACAGCCAGTC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0706",
+      "seq": "AGTAAGCGGAGGTGTGCCAG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0707",
+      "seq": "TCATCCACGCTGTTGCTCCG",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0708",
+      "seq": "TTGAAGCAGAGGTGACGCAC",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0709",
+      "seq": "ACGCATAACGGCAGTTGGAC",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0710",
+      "seq": "AACTTCACGCACATCGCTCC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0711",
+      "seq": "TACCTGCTCACTGCGTCACA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0712",
+      "seq": "TTTATCAGTCGCCGCAGGCA",
+      "gc": 0.55,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0713",
+      "seq": "ACAGTGCCAGCAGGGTTTGT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0714",
+      "seq": "ACGGCTTCGTCCTTCCACTC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0715",
+      "seq": "CCATCGGAGTATCCCGCAAC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0716",
+      "seq": "ACACGCCGATGCTGTTCCTG",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0717",
+      "seq": "CGCCGTTCCGATTCGTTAGC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0718",
+      "seq": "TCACTGAAACCAGCCCGCTC",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0719",
+      "seq": "AGTCCTCAGCGGGAATGTGA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0720",
+      "seq": "TCGGTGAAGAGAGGACGGAG",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0721",
+      "seq": "ACGGCTAAACAGAAGGCGGC",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0722",
+      "seq": "TTACCAGTCCCGACATCGCT",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0723",
+      "seq": "AAACGGCAGGCTGGATAACC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0724",
+      "seq": "TACAACTACTGCCGCCGACA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0725",
+      "seq": "CACAAGTGCTCCAGTGCCGA",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0726",
+      "seq": "TCCCAAACTCGGCTCACTCC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0727",
+      "seq": "CGCATCACTGAAGGGTCCGA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0728",
+      "seq": "AGGCGAACTGCGGATTGACC",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0729",
+      "seq": "CGTATGCCGAATCCAGCCCA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0730",
+      "seq": "ACCGCAGCACGCAGATTTGA",
+      "gc": 0.55,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0731",
+      "seq": "AGAGCGTAGCGGGAATGCGT",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0732",
+      "seq": "CATCGCACAGCGGAATGTCA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0733",
+      "seq": "CGTCGTTAGGGTGCGGCTTA",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0734",
+      "seq": "AACCGATTCGCCCGTTCCCA",
+      "gc": 0.6,
+      "tm": 58.6
+    },
+    {
+      "id": "IDX-0735",
+      "seq": "CGCCGAAACCTCACAGTGGT",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0736",
+      "seq": "CCTGGACCTGATGTGTTCCC",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0737",
+      "seq": "TACAGGGTGCGACGGATTGT",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0738",
+      "seq": "TTGGCGTCAGCAAAGCGAAC",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0739",
+      "seq": "ACCATCACTTTCGCCCGTTG",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0740",
+      "seq": "TCTGCTTGCTCTGGACGGTT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0741",
+      "seq": "AACTGGTGGCACGACCGTAA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0742",
+      "seq": "ACACCGAGACTGTGAGGCTG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0743",
+      "seq": "CTCGGAAGCCTGGCGTTCAT",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0744",
+      "seq": "CTTCCGAAACACGAGCGGTG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0745",
+      "seq": "CCTATTGGTTCCGCCAGAGG",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0746",
+      "seq": "CTCGTGCCGTAAGGGTGCTT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0747",
+      "seq": "TCGTTGACTGTCCCGCCTGA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0748",
+      "seq": "AACGCCCATAGGCAACACCG",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0749",
+      "seq": "CAAGCGTAGCCAGCAAGGGT",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0750",
+      "seq": "TTCAGGTCGGCAGCAATCGC",
+      "gc": 0.6,
+      "tm": 57.9
+    },
+    {
+      "id": "IDX-0751",
+      "seq": "CAGCAGGGTTCATACGCCAG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0752",
+      "seq": "CCAGGGTCGTTTCAGCCCAT",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0753",
+      "seq": "ATCCACTTCGGGCACAACCG",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0754",
+      "seq": "TGGGTGTCTCGTTCTGGAGC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0755",
+      "seq": "AACCTTGGCACTTTCGCAGG",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0756",
+      "seq": "CCTCCGTTGTGGCATTCCTG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0757",
+      "seq": "TACGCTGCGGATTCGGACAA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0758",
+      "seq": "ACCGCACCTGCCTGATTGAG",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0759",
+      "seq": "AGACGCACGCAGTGTGGCAT",
+      "gc": 0.6,
+      "tm": 59.2
+    },
+    {
+      "id": "IDX-0760",
+      "seq": "AGAGACACACCCGACAACCA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0761",
+      "seq": "CACCATACCAATGCCCACCC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0762",
+      "seq": "ACAAACTGAACGGCACAGGG",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0763",
+      "seq": "CACCAACCAGACTCCGTGGA",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0764",
+      "seq": "CAGGCGGCACGCTGTAAAGT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0765",
+      "seq": "TTTGTGGCGTGTCGTCCCTG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0766",
+      "seq": "TTTCGTAGCGAGCCAGCGAT",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0767",
+      "seq": "CTATGTGACGGGCAAGGCTC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0768",
+      "seq": "CAAGAACGCACAACCCACGG",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0769",
+      "seq": "TGTAGCGACGACGCCAACCA",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0770",
+      "seq": "CAGTGGATTGATGCGGGCGT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0771",
+      "seq": "CGAAGGCACAATGGCGTCTT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0772",
+      "seq": "CGATGCCGCACAAGGATACG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0773",
+      "seq": "ATCCGTCGTAGTCTCTGCCC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0774",
+      "seq": "ACCGAAGGTATGGGCAGTCG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0775",
+      "seq": "ATGAAGTCGGACGGGCAGCA",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0776",
+      "seq": "TAGTCTCCGCTGGTTGCTCG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0777",
+      "seq": "TCTCGCTCGGACGACCTTCT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0778",
+      "seq": "ATCAGCCATCTGTGCGTCCT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0779",
+      "seq": "TAACAACAGGGCTACCCGCA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0780",
+      "seq": "CGGTATCAATCTGCGGGTGG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0781",
+      "seq": "CCTTGGGCAACTCCCGTTCT",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0782",
+      "seq": "AGCAGGGCTACAGGCTCTAC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0783",
+      "seq": "TCAAGGTCGTGCCGTGCTTA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0784",
+      "seq": "TCGTAGCCATCCCAAGGTCC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0785",
+      "seq": "CAAGACTCCCAGCCGCAGAT",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0786",
+      "seq": "CTAATGCTCGGTGCCAGGTG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0787",
+      "seq": "CGGTGTTCTCTGTAGGGTGC",
+      "gc": 0.6,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0788",
+      "seq": "TTGCTTGTGCTGGGTCTGTC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0789",
+      "seq": "ATACAGAGTGTCCGCAGGCA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0790",
+      "seq": "AATGCGGCACGCTTGTAACG",
+      "gc": 0.55,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0791",
+      "seq": "CACAACCACGCCCTGAATGG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0792",
+      "seq": "TACCTGCTATGCGAGCGGTG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0793",
+      "seq": "CGACAATCCTTGGCTTGCCG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0794",
+      "seq": "CGCTCCCGAACTCTTCAGTG",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0795",
+      "seq": "TGTAGGGTTGCCGTGGTCTG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0796",
+      "seq": "ACTCAACGCTTGTCGCCAGG",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0797",
+      "seq": "CAAGTGTATCGGGACGGCTG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0798",
+      "seq": "CAGTTAGCGGGCTCGCAATC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0799",
+      "seq": "TACAACCATTCCACGCCCAC",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0800",
+      "seq": "TTGCCTCTGGAAGCAGGAGC",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0801",
+      "seq": "TATCTGCGGCTTTCTGGGCG",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0802",
+      "seq": "TGCTTGGATGTCGGGAGTGA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0803",
+      "seq": "CCACACTTAGCCTCACCGCT",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0804",
+      "seq": "ACGCCTTCAGGGCACAGAGA",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0805",
+      "seq": "CCTGTGCGATTTGCTCCCTT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0806",
+      "seq": "AGCCTTAGTCATCGGCGAGC",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0807",
+      "seq": "ATCATCAGACCCAGCGGAGG",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0808",
+      "seq": "CAGGGCAGCAGGTTTGTCAT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0809",
+      "seq": "TCACTGGAACAATCGCAGGC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0810",
+      "seq": "ATGCGTTGGAACCAGCCACG",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0811",
+      "seq": "CGATACGCCTGCTCCAACTC",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0812",
+      "seq": "ACAAAGGCTTGCCGACCAAA",
+      "gc": 0.5,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0813",
+      "seq": "CACCCGTCCGCATAACCCTA",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0814",
+      "seq": "ATAAGGAGGCACAGGCGGAA",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0815",
+      "seq": "TATGGACGCAGCGAGACAGC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0816",
+      "seq": "AACAGCGGTGAGCAGACTCT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0817",
+      "seq": "TGGTTCGTTCCCACCTTCGC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0818",
+      "seq": "TTGGGCAAGGGAAGGGTGTA",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0819",
+      "seq": "CGTGCGGCAGTCCACTAACA",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-0820",
+      "seq": "TCGGCGTATGGCGTTGGTAG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0821",
+      "seq": "TCACCTTGGCACAGGACTCC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0822",
+      "seq": "TACGCCGCCCTGAACAGAGA",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0823",
+      "seq": "TTTGTCCCAAGCCATCGCCT",
+      "gc": 0.55,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0824",
+      "seq": "CACCCGTTCTGGTCACAAGC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0825",
+      "seq": "CGAGCCTCTGCTTTCGCTTT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0826",
+      "seq": "TGGGAGCAGCGGGAAATCCT",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0827",
+      "seq": "TTGGCTATTGCTGGCTGGAC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0828",
+      "seq": "CTGGACAGGCGTGGAGTTCA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0829",
+      "seq": "ACGATGCTTCTGCGGAGGAA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0830",
+      "seq": "ACAGTCTTGGTCCGTCCCAT",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0831",
+      "seq": "ATGAACCGTCAAGCCGCACG",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0832",
+      "seq": "CACGGGTCACAGAAGCCTAC",
+      "gc": 0.6,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0833",
+      "seq": "TCATTCTCCACCGTTCGGGA",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0834",
+      "seq": "TACAAGCGGTGAACCCTGGT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0835",
+      "seq": "CTCCAGGGTTAGCCTCGGAA",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0836",
+      "seq": "CGCCATAAAGGCAACACCGA",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0837",
+      "seq": "AAGCGTTTCCGACCGTTGGC",
+      "gc": 0.6,
+      "tm": 58.2
+    },
+    {
+      "id": "IDX-0838",
+      "seq": "TTTACGGCGGAGTAGCCACG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0839",
+      "seq": "ATAAGCGGGTCCGAGGAGAG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0840",
+      "seq": "TGGCGGTTCGTAGTCACGGA",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0841",
+      "seq": "TGGCACGCTACCTGTCCCAA",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0842",
+      "seq": "AGCAGACATTCGCCCATCGC",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0843",
+      "seq": "ACAGTCGGGCTGACATAGGC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0844",
+      "seq": "TTTCTCTGACGCCCTTCCGC",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0845",
+      "seq": "CGTGACTGGATGTCGCTCTG",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0846",
+      "seq": "TACGGAGGACGACAAGGCTG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0847",
+      "seq": "AGTGGGAAGCGGAACTGGGA",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0848",
+      "seq": "TTGGACAGAGCCCTGGTGTG",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0849",
+      "seq": "TGGCGTAGGATGTCGGGCAT",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-0850",
+      "seq": "CATCCAGGGCTAACTTGCGG",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0851",
+      "seq": "TCGGTCATCCAGGAAAGCCC",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0852",
+      "seq": "ATCGCCCAACCGCATAGCAA",
+      "gc": 0.55,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0853",
+      "seq": "TGCGTCGTCGCCAGTATGGT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0854",
+      "seq": "TTGCTATGGCTCCTCTGCCT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0855",
+      "seq": "CTCTGGAATGTGCTGGGTCC",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0856",
+      "seq": "AATGTCGTGGCAGTCGTTGG",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0857",
+      "seq": "AAGCCGTGTGGTAAATCGCC",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0858",
+      "seq": "CGCCTCTACGGCTCATAGCA",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0859",
+      "seq": "TCACGCTCTCTATCGCTCCG",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0860",
+      "seq": "TGGAAGGCAAACAGGCAGCG",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0861",
+      "seq": "TTACCAACGGGCGTGTCGGA",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0862",
+      "seq": "TGTGATACCCTCGCCACCAT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0863",
+      "seq": "ACCATCCCTGTGACTTGGCT",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0864",
+      "seq": "ACCCACCTCTCCTTGCTGGT",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0865",
+      "seq": "TAGGTAGGCAGGCTGAGGTC",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0866",
+      "seq": "ATTTGCGGCGTCATTGGTCA",
+      "gc": 0.5,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0867",
+      "seq": "CAGCAGGACCAACAGGAGAC",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0868",
+      "seq": "TCAAACGCACCACCGACCTT",
+      "gc": 0.55,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0869",
+      "seq": "TGTGCCTCACGGAGACAGAA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0870",
+      "seq": "TCAGCACTGTTAGCCAGCCA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0871",
+      "seq": "AGTCCAACTCCCTCGGCATC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0872",
+      "seq": "AGGATGGCTACCCAGAGAGC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0873",
+      "seq": "TTCAAATCGCACGCTGTCGG",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0874",
+      "seq": "CGTTGAGGACTGAGATGGGC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0875",
+      "seq": "CTGGATGGGACGCAGGATGT",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0876",
+      "seq": "AGAGTTGTCGGTTCGTCCCA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0877",
+      "seq": "CACGGCGAAGGTTCACTGAG",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0878",
+      "seq": "AAAGTCTTGGTGCGGGACAC",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0879",
+      "seq": "TGGAACGACGAGTGCGTGTT",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0880",
+      "seq": "CATCCCGCAATGGGCTCAAA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0881",
+      "seq": "TCACGATGCTCTGGTCGGTC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0882",
+      "seq": "TGGTGAGCGGCGTGTTCAAG",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0883",
+      "seq": "CGGGCACAAAGTCTGAGCAT",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0884",
+      "seq": "CGTAACCTCGGCTGCGTTTG",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0885",
+      "seq": "TTCACCCTCGCACAGTGTCT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0886",
+      "seq": "AGACCAATCTTGCGTCGCCT",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0887",
+      "seq": "CACTGCGGCGTGTGTAAGTT",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0888",
+      "seq": "CAAGGGAATGGTTGCGTCCT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0889",
+      "seq": "CGCTCAAGACCCAAAGACGC",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0890",
+      "seq": "ACCCAAAGGTGGTTGTGGCG",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0891",
+      "seq": "ACCAGAAGCCCAGGGAATGC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-0892",
+      "seq": "TGGCACAGTTCCGATGCGTC",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0893",
+      "seq": "AGGGAGTGTTCCACGAGCAT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0894",
+      "seq": "ATCGCAATCGTCGTGTCCGA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0895",
+      "seq": "CGCAGTCACAATGGCGAACC",
+      "gc": 0.6,
+      "tm": 56.9
+    },
+    {
+      "id": "IDX-0896",
+      "seq": "CGGGACAAGAGAGGTAGCGA",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0897",
+      "seq": "CCTGCGGCATTGGGACTCAT",
+      "gc": 0.6,
+      "tm": 57.5
+    },
+    {
+      "id": "IDX-0898",
+      "seq": "AATCAGCGGTTTCGGGACCA",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0899",
+      "seq": "ACCCACCTGGACTCTTGTGC",
+      "gc": 0.6,
+      "tm": 56.7
+    },
+    {
+      "id": "IDX-0900",
+      "seq": "CATACGGCAACCGACTCAGG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0901",
+      "seq": "CGCCGAGCAAATGTTGTGCC",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0902",
+      "seq": "CAGTGGAGCCTCAAAGTGCC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0903",
+      "seq": "CGGCATTTACGACTCGCAGC",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0904",
+      "seq": "CATCCACAGGGCTGCTGGTA",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0905",
+      "seq": "TGATGACAAGTGGTCGCCCA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0906",
+      "seq": "ACAGGCGGTGGTAATCCAGA",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0907",
+      "seq": "TGGGCGGCAGTAAGTTGATG",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0908",
+      "seq": "AGTTCGTGTCCCGTAGCACC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0909",
+      "seq": "CCTGAGGCAAAGCGGGAAAG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0910",
+      "seq": "ACACCTGCCATAGAACGGCT",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0911",
+      "seq": "AGACAGGGTCCGAACTCACC",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0912",
+      "seq": "AGCCACGAGGCAAGTCAGAG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0913",
+      "seq": "CGGCTCGGACATTCTCCAAG",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0914",
+      "seq": "TATCGTCCCGCCCACAAGTT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0915",
+      "seq": "TGCCGAGAAAGAGCGGTGAA",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0916",
+      "seq": "ATCTCCGTTCAGCAAGCACG",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0917",
+      "seq": "CCTCCCACGCCTAACCGTAA",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0918",
+      "seq": "ATCACCGACACACGAGGGAT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0919",
+      "seq": "TCCAACTCTTGCCCGCATCT",
+      "gc": 0.55,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0920",
+      "seq": "TCCAGGTCGGGTAAGTCGTG",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0921",
+      "seq": "TACGCACCAGAGTGGGCAAA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0922",
+      "seq": "CTCCACACAACTGTCCGCAC",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0923",
+      "seq": "CGTTGTAGGTTCAGCCACCC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0924",
+      "seq": "ACCTATGCCTGTCGTGACCG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0925",
+      "seq": "CTGAGTTCCTCTGCGGGAGA",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0926",
+      "seq": "CCTTCAGCCGAGTAGTCCCT",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0927",
+      "seq": "CGACTGGATAACACGCACCC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0928",
+      "seq": "CTCTGTGAATGGGACGCCTG",
+      "gc": 0.6,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0929",
+      "seq": "TGGGATTCCTTCCGACTGGC",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-0930",
+      "seq": "CACGACGGTGGGTTCCCTTA",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0931",
+      "seq": "CGCTACATCGTCAGAGGCGT",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-0932",
+      "seq": "AACACCACACGATGGGCACC",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0933",
+      "seq": "CGCCCGAAACATAGGCTGTG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0934",
+      "seq": "TGCCCTGTTGCGTCTAAAGC",
+      "gc": 0.55,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0935",
+      "seq": "TATTGGCAGGAGGGAGGTGC",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0936",
+      "seq": "TCTGGCAGTGAACAGTCCCT",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0937",
+      "seq": "CTGCGTGTTTGAGTGCGGCA",
+      "gc": 0.6,
+      "tm": 58.4
+    },
+    {
+      "id": "IDX-0938",
+      "seq": "AAACTGCCTTTGCGGTGTCG",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0939",
+      "seq": "AGTTGGCAAACCGTGCGTGT",
+      "gc": 0.55,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0940",
+      "seq": "CTGGAGCACGGTGAGAGCAA",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0941",
+      "seq": "TTGAGGTGCTCGGCTCCAGA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0942",
+      "seq": "AATCACCCGTGGAATGGCAG",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0943",
+      "seq": "AGACAGGCTTGACTGAGGCT",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0944",
+      "seq": "CCTCAGCCGCAATCCAGAAG",
+      "gc": 0.6,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0945",
+      "seq": "ATCATCGTTGGGCGGTTGCT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0946",
+      "seq": "TGCTCTGGGCACAGTTGATG",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0947",
+      "seq": "CAGGCTGAGGAGTTTCGGTC",
+      "gc": 0.6,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0948",
+      "seq": "TGGCACCAAGCGTTACCTGA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0949",
+      "seq": "CCATCGGAACTCGGCACCAT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0950",
+      "seq": "TTGGCAAGGCTGTATTCGGC",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0951",
+      "seq": "ACCTGGGAATGTCGCTCACT",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0952",
+      "seq": "AGCAGCGAGTCCCTGGATAC",
+      "gc": 0.6,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0953",
+      "seq": "TTCAGGGTGTGCTTTGAGGC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0954",
+      "seq": "CTGACAGCACGGTTGCCAAA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0955",
+      "seq": "AAATGCGAGCGTCCGTCCAA",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0956",
+      "seq": "CCAGCCTTGGCATCCTTCTC",
+      "gc": 0.6,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-0957",
+      "seq": "CCGAATGACGGACCAATCGC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0958",
+      "seq": "CGGGTGGGAAGGATGAACAC",
+      "gc": 0.6,
+      "tm": 55.5
+    },
+    {
+      "id": "IDX-0959",
+      "seq": "AACAGTCAGGGCTCCCGAAT",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0960",
+      "seq": "TGGGCAAGCCAAACCCTCCA",
+      "gc": 0.6,
+      "tm": 59.1
+    },
+    {
+      "id": "IDX-0961",
+      "seq": "CCCAAGACGATGACCTGCGA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0962",
+      "seq": "TTCTTGGGACAGACTGGCGA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0963",
+      "seq": "ATGGAGCAAGGGCACAGTTG",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-0964",
+      "seq": "TTCGCAGGAGTCCATCCCAG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-0965",
+      "seq": "TGGTAGTGCCCTTAGCGTCA",
+      "gc": 0.55,
+      "tm": 55.1
+    },
+    {
+      "id": "IDX-0966",
+      "seq": "TATCGGGCTCCTTGTTGGCA",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0967",
+      "seq": "TGTAAGCGATGTCCTCCCGT",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-0968",
+      "seq": "ACAGCAGCAACTGACGCTTG",
+      "gc": 0.55,
+      "tm": 55.8
+    },
+    {
+      "id": "IDX-0969",
+      "seq": "AGAGGACACAGGGTCAGCGA",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0970",
+      "seq": "CGGGTTTGGAGGTTGCGTCT",
+      "gc": 0.6,
+      "tm": 57.4
+    },
+    {
+      "id": "IDX-0971",
+      "seq": "CGTAGGTTATCGCCGAGTGC",
+      "gc": 0.6,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0972",
+      "seq": "AGATTACGGGTGCCGCCCAT",
+      "gc": 0.6,
+      "tm": 58.4
+    },
+    {
+      "id": "IDX-0973",
+      "seq": "AGGGCGGACTGAAGAGGCTT",
+      "gc": 0.6,
+      "tm": 57.7
+    },
+    {
+      "id": "IDX-0974",
+      "seq": "TGTGTGCCGCTCTCCGAACT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0975",
+      "seq": "CGAATGCGATGACACGGCGT",
+      "gc": 0.6,
+      "tm": 57.8
+    },
+    {
+      "id": "IDX-0976",
+      "seq": "TCCACTGAGCGGGACATCTT",
+      "gc": 0.55,
+      "tm": 55.2
+    },
+    {
+      "id": "IDX-0977",
+      "seq": "TGTAGGTTTCCTCCGCCGAA",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0978",
+      "seq": "AACCAAGCGAACACCCTTCC",
+      "gc": 0.55,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0979",
+      "seq": "CCCGATGCCCGAGAAGAGAT",
+      "gc": 0.6,
+      "tm": 56.0
+    },
+    {
+      "id": "IDX-0980",
+      "seq": "TCCCACTTTGGACGGTTCCC",
+      "gc": 0.6,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-0981",
+      "seq": "ACGGGCACTACTTTCCAGCG",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0982",
+      "seq": "CCTTATTGTCCGCCCTGGGA",
+      "gc": 0.6,
+      "tm": 56.4
+    },
+    {
+      "id": "IDX-0983",
+      "seq": "TCCCGCCGATAACGCTGAAA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0984",
+      "seq": "TGCCACGGAACCACCCATTA",
+      "gc": 0.55,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-0985",
+      "seq": "TTAGCCCAATGGAGCGGGAA",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0986",
+      "seq": "ACGATGCGACTGCGATGACC",
+      "gc": 0.6,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-0987",
+      "seq": "AGGTGGCAACGGGTTCCAAG",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-0988",
+      "seq": "TAACAAGGCTGGGCGTCCTG",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-0989",
+      "seq": "TGCCGCTTTACTGCCTCCCA",
+      "gc": 0.6,
+      "tm": 58.5
+    },
+    {
+      "id": "IDX-0990",
+      "seq": "TGGCATCCCTTGTGGAGGCT",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-0991",
+      "seq": "TTTAGCACCCTGTCGCTGGT",
+      "gc": 0.55,
+      "tm": 55.9
+    },
+    {
+      "id": "IDX-0992",
+      "seq": "ACTCCTGGCACCAACTCTGG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0993",
+      "seq": "CAATCTCCCTTCGTCCACGC",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0994",
+      "seq": "ACTGTGAGGCTTGGGTGGGT",
+      "gc": 0.6,
+      "tm": 58.1
+    },
+    {
+      "id": "IDX-0995",
+      "seq": "TCCGAACGGCACCTCTTCTG",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0996",
+      "seq": "CTGGGTCCATCCGTTGTCCA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-0997",
+      "seq": "TAGGTAGAACGACCGCTCCG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-0998",
+      "seq": "CTCAAGCCGCTCAGGTTCTG",
+      "gc": 0.6,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-0999",
+      "seq": "TTCTGAAGCGGAGCGTGGTA",
+      "gc": 0.55,
+      "tm": 55.4
+    },
+    {
+      "id": "IDX-1000",
+      "seq": "CCAGTCTCGTTGCTGACGGT",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-1001",
+      "seq": "AGAGGTCCCAAGCCAAGGTT",
+      "gc": 0.55,
+      "tm": 55.7
+    },
+    {
+      "id": "IDX-1002",
+      "seq": "CTTGACTGCCTTGCGGGATG",
+      "gc": 0.6,
+      "tm": 56.3
+    },
+    {
+      "id": "IDX-1003",
+      "seq": "ATGCGTTCGGCTTGGCTCGT",
+      "gc": 0.6,
+      "tm": 59.2
+    },
+    {
+      "id": "IDX-1004",
+      "seq": "CCGAAGCGACAGTTGGTGTG",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-1005",
+      "seq": "TGGATTCCCTGCCGCAAACG",
+      "gc": 0.6,
+      "tm": 58.0
+    },
+    {
+      "id": "IDX-1006",
+      "seq": "TTGTGTCCTCGGTCCAGCGA",
+      "gc": 0.6,
+      "tm": 57.6
+    },
+    {
+      "id": "IDX-1007",
+      "seq": "TGGACTGTGAGTGGTGCCTG",
+      "gc": 0.6,
+      "tm": 56.6
+    },
+    {
+      "id": "IDX-1008",
+      "seq": "TCTGGCTCCCTGGTCATCCA",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-1009",
+      "seq": "TGTCTCTCAGCAGCCGATGA",
+      "gc": 0.55,
+      "tm": 55.0
+    },
+    {
+      "id": "IDX-1010",
+      "seq": "CCCACTCTTCTTGACAGCGG",
+      "gc": 0.6,
+      "tm": 55.3
+    },
+    {
+      "id": "IDX-1011",
+      "seq": "ATCCGTCGCTGTGGCTGTTC",
+      "gc": 0.6,
+      "tm": 57.3
+    },
+    {
+      "id": "IDX-1012",
+      "seq": "AGCGGGCGATTTCTGTGCGT",
+      "gc": 0.6,
+      "tm": 59.2
+    },
+    {
+      "id": "IDX-1013",
+      "seq": "AGCGTGGCGGAATGCTGAAA",
+      "gc": 0.55,
+      "tm": 57.2
+    },
+    {
+      "id": "IDX-1014",
+      "seq": "ACTTTGCTGGCGGTGTGTTG",
+      "gc": 0.55,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-1015",
+      "seq": "CTGTGGGAGTTGAGTCGCCA",
+      "gc": 0.6,
+      "tm": 56.5
+    },
+    {
+      "id": "IDX-1016",
+      "seq": "TGTGAAGCCGCAGCGTCTTT",
+      "gc": 0.55,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-1017",
+      "seq": "CCGTATGCGATAAAGCGGGC",
+      "gc": 0.6,
+      "tm": 56.2
+    },
+    {
+      "id": "IDX-1018",
+      "seq": "AAGCGGTTGTTCAGCCAGCC",
+      "gc": 0.6,
+      "tm": 58.3
+    },
+    {
+      "id": "IDX-1019",
+      "seq": "CCAAGCAAAGTGCCGCCAAT",
+      "gc": 0.55,
+      "tm": 56.8
+    },
+    {
+      "id": "IDX-1020",
+      "seq": "TCTACGAGGCGACCCAACCT",
+      "gc": 0.6,
+      "tm": 57.0
+    },
+    {
+      "id": "IDX-1021",
+      "seq": "CACGGTAAGTGCCCAGCAGT",
+      "gc": 0.6,
+      "tm": 57.1
+    },
+    {
+      "id": "IDX-1022",
+      "seq": "TGATGAACAGCCCACAGGGA",
+      "gc": 0.55,
+      "tm": 55.6
+    },
+    {
+      "id": "IDX-1023",
+      "seq": "TCCCTCGGAACCAGACCAAC",
+      "gc": 0.6,
+      "tm": 56.1
+    },
+    {
+      "id": "IDX-1024",
+      "seq": "AACGAGGGAGAGGCTGGAGT",
+      "gc": 0.6,
+      "tm": 56.9
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+/* DMS Foundry · 严格黑白设计系统
+   零彩色、零圆角、零阴影。状态只靠形状、字重、灰阶与删除线区分；
+   下划线只留给链接，不用来表达状态。 */
+
+:root{
+  --paper:#FFFFFF; --panel:#FCFCFC;
+  --ink:#0B0B0B; --ink2:#3A3A3A; --muted:#5A5A5A; --faint:#6E6E6E; --drop:#767676;
+  --rule:#E4E4E4; --rule2:#B6B6B6; --hover:#F5F5F5; --track:#EAEAEA;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:"PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --fast:140ms; --base:190ms; --slow:230ms;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --topbar:56px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:13px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit;background:none}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+[role="button"]{cursor:pointer}
+tr[role="button"]:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* ── 顶栏 ─────────────────────────────────────────── */
+.topbar{position:sticky;top:0;z-index:30;height:var(--topbar);display:flex;align-items:center;gap:34px;
+        padding:0 40px;background:var(--paper);border-bottom:1px solid var(--ink)}
+.brand{font:400 13px/1 var(--mono);letter-spacing:.14em;color:var(--ink)}
+.brand b{font-weight:600;letter-spacing:.14em;margin-right:7px}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{font-size:13px;color:var(--muted);padding:20px 0 19px;border-bottom:2px solid transparent;transition:color var(--fast) var(--ease)}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+.topbar .right{margin-left:auto;display:flex;align-items:center;gap:16px}
+.avatar{width:26px;height:26px;background:var(--ink);color:var(--paper);font:500 10px/26px var(--mono);text-align:center;letter-spacing:.04em}
+
+/* ── 按钮与表单 ───────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;padding:7px 14px;border:1px solid var(--ink);
+     background:var(--paper);cursor:pointer;transition:background var(--fast) var(--ease),color var(--fast) var(--ease)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.dark{background:var(--ink);color:var(--paper)}
+.btn.dark:hover{background:var(--paper);color:var(--ink)}
+.btn.plain{border-color:var(--rule2);color:var(--ink2)}
+.btn.plain:hover{background:var(--hover);color:var(--ink)}
+.btn.sm{padding:4px 10px;font-size:12px}
+.btn:disabled{opacity:.38;cursor:not-allowed}
+.btn:disabled:hover{background:var(--paper);color:inherit}
+
+.link{font-size:12.5px;color:var(--ink);border-bottom:1px solid var(--ink2);cursor:pointer;padding-bottom:1px}
+.link:hover{opacity:.55}
+
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.field > label{font-size:12px;color:var(--muted)}
+.input,select.input,textarea.input{width:100%;border:1px solid var(--rule2);background:var(--paper);padding:9px 11px;
+        font-size:13px;transition:border-color var(--fast) var(--ease)}
+.input:hover{border-color:var(--ink2)}
+.input:focus{outline:none;border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+textarea.input{font-family:var(--mono);font-size:12px;line-height:1.7;resize:vertical;letter-spacing:.01em}
+.hint{font-size:11.5px;color:var(--faint)}
+.hint.body{font-size:13px;line-height:1.8;color:var(--ink2);max-width:520px}
+
+/* ── 页面 ─────────────────────────────────────────── */
+.page{padding:28px 40px 0;animation:enter var(--base) var(--ease) both}
+@keyframes enter{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.page-head h1{font-size:27px;font-weight:700;letter-spacing:-.045em;line-height:1.14}
+.page-head h1 .meta{font:400 12px/1 var(--mono);color:var(--muted);letter-spacing:0;margin-left:12px;font-weight:400}
+.page-head .sub{margin-top:6px;font-size:12.5px;color:var(--muted)}
+.page-head .aside{text-align:right;font-size:12px;color:var(--muted);line-height:1.7}
+.page-head .aside b{display:block;font:400 12.5px/1.6 var(--mono);color:var(--ink)}
+
+/* ── 数字带 ───────────────────────────────────────── */
+.band{display:flex;border-bottom:1px solid var(--ink)}
+.band > div{padding:11px 26px 12px;border-right:1px solid var(--rule)}
+.band > div:first-child{padding-left:0}
+.band > div:last-child{border-right:0}
+.band span{display:block;font-size:11.5px;color:var(--muted);margin-bottom:5px}
+.band b{font:700 23px/1 var(--sans);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.band b i{font:500 12.5px/1 var(--sans);font-style:normal;letter-spacing:0;margin-left:3px;color:var(--muted)}
+.band .note{align-self:center;padding-left:24px;border:0;font-size:13px;color:var(--faint);line-height:1.6}
+
+/* ── 告警（工作台） ───────────────────────────────── */
+.alerts{border:1px solid var(--ink);margin-top:22px}
+.alerts .hd{display:flex;align-items:center;padding:8px 16px;border-bottom:1px solid var(--rule);font-size:11.5px;color:var(--muted)}
+.alerts .hd b{color:var(--ink);font-weight:600}
+.alerts .row{display:grid;grid-template-columns:2px 1fr 96px 88px;align-items:center;gap:14px;padding:0 16px 0 14px}
+.alerts .row + .row{border-top:1px solid var(--rule)}
+.alerts .row:hover{background:var(--hover)}
+.alerts .bar{width:2px;height:100%;background:transparent}
+.alerts .row.top{padding-top:12px;padding-bottom:12px}
+.alerts .row.top .bar{background:var(--ink)}
+.alerts .row.top .t{font-size:16px;font-weight:700;letter-spacing:-.02em}
+.alerts .row.top .n{font:700 21px/1 var(--sans);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.alerts .row.mini{padding-top:8px;padding-bottom:8px;color:var(--muted)}
+.alerts .row.mini .t{font-size:13.5px}
+.alerts .row.mini .n{font:400 15px/1 var(--mono);color:var(--ink2)}
+.alerts .t s{display:block;text-decoration:none;font-weight:400;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+.alerts .n{text-align:right}
+.alerts .go{font-size:12px;color:var(--ink);border-bottom:1px solid var(--ink2);justify-self:end;cursor:pointer;white-space:nowrap}
+
+/* ── 索引表 ───────────────────────────────────────── */
+.table{width:100%;border-collapse:collapse;table-layout:fixed}
+.table th{font-size:11.5px;font-weight:400;color:var(--muted);text-align:left;letter-spacing:.02em;
+          padding:10px 12px;border-bottom:2px solid var(--ink);white-space:nowrap}
+.table th:first-child,.table td:first-child{padding-left:0}
+.table th:last-child,.table td:last-child{padding-right:0;text-align:right}
+.table td{padding:0 12px;height:38px;border-bottom:1px solid var(--rule);font-size:13px;vertical-align:middle}
+.table tbody tr{transition:background var(--fast) var(--ease)}
+.table tbody tr:hover{background:var(--hover)}
+.table tbody tr.click{cursor:pointer}
+.table .name{font-weight:600}
+.table .m{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.table .dim{color:var(--muted)}
+.table .acts{opacity:0;transition:opacity var(--fast) var(--ease)}
+.table tr:hover .acts,.table tr:focus-within .acts{opacity:1}
+
+/* ── 状态语法：实心 / 斜纹 / 空心灰 / 双线 ─────────── */
+.st{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;white-space:nowrap}
+.st i{width:8px;height:8px;flex:none;background:var(--ink)}
+.st.ok{color:var(--ink2)}
+.st.ok i{background:var(--ink)}
+.st.warn{font-weight:700;color:var(--ink)}
+.st.warn i{background:repeating-linear-gradient(45deg,var(--ink) 0 2px,transparent 2px 4px);outline:1px solid var(--ink)}
+.st.drop{color:var(--drop)}
+.st.drop i{background:transparent;outline:1px solid var(--rule2)}
+.st.drop s{text-decoration:line-through;text-decoration-thickness:1px}
+.st.run i{background:var(--ink)}
+.st.done i{background:transparent;outline:2px solid var(--ink)}
+.st.draft{color:var(--muted)}
+.st.draft i{background:transparent;outline:1px dashed var(--rule2)}
+
+/* ── 工具条 / 页签 / 胶囊 ─────────────────────────── */
+.tools{display:flex;align-items:center;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule2);min-height:44px}
+.tabs{display:flex;align-items:center;gap:18px}
+.tab{font-size:12.5px;color:var(--muted);padding:4px 0;border-bottom:2px solid transparent;cursor:pointer;transition:color var(--fast)}
+.tab b{font-family:var(--mono);font-weight:400;font-size:11.5px;margin-left:6px;color:var(--faint)}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+.tab.on b{color:var(--ink)}
+.pills{display:flex;gap:7px;padding-left:16px;border-left:1px solid var(--rule)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;border:1px solid var(--rule2);padding:3px 8px;color:var(--ink2);white-space:nowrap}
+.pill x{font-family:var(--mono);font-size:10px;color:var(--faint);cursor:pointer}
+.pill.add{border-style:dashed;color:var(--muted);cursor:pointer}
+.tools .right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.order{display:flex;align-items:baseline;gap:10px}
+.order em{font-style:normal;font-size:11.5px;color:var(--faint)}
+.selbar{display:flex;align-items:center;gap:14px}
+.selbar b{font:600 13px/1 var(--sans)}
+.selbar .b{border-bottom:1px solid var(--ink2);cursor:pointer;font-size:12.5px}
+
+/* ── 变体表 ───────────────────────────────────────── */
+.gridwrap{height:calc(100vh - 268px);overflow:auto}
+.grid{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed}
+.grid thead th{position:sticky;top:0;z-index:2;background:var(--paper);
+  font-size:11.5px;font-weight:400;color:var(--muted);text-align:left;padding:9px 10px;
+  border-bottom:2px solid var(--ink);white-space:nowrap}
+.grid td{padding:0 10px;height:36px;border-bottom:1px solid var(--rule);font-size:13px;background:var(--paper)}
+.grid tbody tr{cursor:pointer;transition:background var(--fast) var(--ease)}
+.grid tbody tr:hover td{background:var(--hover)}
+.grid tbody tr.sel td{background:var(--hover);box-shadow:inset 0 1px 0 var(--ink),inset 0 -1px 0 var(--ink)}
+.grid tbody tr.sel td:first-child{box-shadow:inset 2px 0 0 var(--ink),inset 0 1px 0 var(--ink),inset 0 -1px 0 var(--ink)}
+.grid .id{font:500 13px/1 var(--mono)}
+.grid .drop .id{color:var(--drop);text-decoration:line-through}
+.grid .drop td{color:var(--drop)}
+.grid .r{text-align:right}
+.grid .m{font:400 12px/1 var(--mono);color:var(--ink2)}
+.grid .act{opacity:1}
+.grid tbody tr:hover .act,.grid tbody tr:focus-within .act{opacity:1}
+.grid .act span{font-size:12px;color:var(--muted);border-bottom:1px solid var(--rule2);cursor:pointer}
+.grid .act span:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+.ck{width:13px;height:13px;border:1px solid var(--ink2);display:inline-block;cursor:pointer;position:relative;flex:none}
+.ck:hover{border-color:var(--ink)}
+.ck.on{background:var(--ink);border-color:var(--ink)}
+.ck.on::after{content:"";position:absolute;left:3px;top:3px;width:5px;height:5px;background:var(--paper)}
+.ck.part{background:repeating-linear-gradient(45deg,var(--ink) 0 2px,transparent 2px 4px)}
+
+/* ── 抽屉 ─────────────────────────────────────────── */
+.drawer{position:fixed;top:var(--topbar);right:0;bottom:0;width:400px;background:var(--paper);border-left:1px solid var(--ink);
+        transform:translateX(100%);transition:transform var(--slow) var(--ease);z-index:41;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+body.has-drawer .page{padding-right:440px;transition:padding var(--slow) var(--ease)}
+.drawer .dhead{padding:16px 20px;border-bottom:1px solid var(--ink);display:flex;align-items:flex-start;gap:12px}
+.drawer .dhead h2{font-size:20px;font-weight:700;letter-spacing:-.03em;font-family:var(--mono)}
+.drawer .dhead .x{margin-left:auto;font:400 16px/1 var(--mono);color:var(--muted);cursor:pointer;padding:4px}
+.drawer .dhead .x:hover{color:var(--ink)}
+.drawer .verdict{padding:13px 20px;font-size:15px;font-weight:600;letter-spacing:-.01em;line-height:1.45;border-bottom:1px solid var(--rule)}
+.drawer .dbody{padding:16px 20px;overflow:auto;flex:1}
+.drawer .dfoot{padding:12px 20px;border-top:1px solid var(--rule2);display:flex;gap:8px;align-items:center}
+.drawer .dfoot .next{margin-left:auto}
+.kv{display:grid;grid-template-columns:78px 1fr;gap:8px 14px;font-size:12.5px;margin-bottom:16px}
+.kv dt{color:var(--muted)}
+.kv dd{color:var(--ink)}
+.seqbox{font:400 13px/1.9 var(--mono);letter-spacing:.06em;border:1px solid var(--rule2);padding:10px 12px 8px;margin-bottom:6px;background:var(--panel);overflow-x:auto;white-space:nowrap}
+.seqbox em{font-style:normal;background:var(--ink);color:var(--paper);padding:1px 2px}
+.why{font-size:12.5px;color:var(--ink2);line-height:1.7;border-left:2px solid var(--ink);padding-left:11px;margin-top:4px}
+.drawer .note{font-size:11.5px;color:var(--faint);margin-top:12px}
+
+/* ── 空状态 ───────────────────────────────────────── */
+.empty{border:1px dashed var(--rule2);padding:54px 24px;text-align:center;margin-top:26px}
+.empty b{display:block;font-size:15px;font-weight:600;margin-bottom:8px}
+.empty p{font-size:12.5px;color:var(--muted);max-width:420px;margin:0 auto 18px}
+
+/* ── 向导 ─────────────────────────────────────────── */
+.wizard{display:grid;grid-template-columns:212px 1fr;gap:44px;padding-top:24px}
+.steps{display:flex;flex-direction:column}
+.steps .s{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);color:var(--muted);cursor:pointer}
+.steps .s .n{font:400 11px/1.7 var(--mono);color:var(--faint)}
+.steps .s .t{font-size:13px;display:block}
+.steps .s .d{display:block;font-size:11.5px;color:var(--faint);margin-top:4px;line-height:1.5}
+.steps .s.on{color:var(--ink)}
+.steps .s.on .n{color:var(--ink);font-weight:600}
+.steps .s.on .t{font-weight:600}
+.steps .s.done .n::after{content:" ✓"}
+.form{max-width:860px}
+.form .split{display:grid;grid-template-columns:minmax(0,430px) 330px;gap:40px;align-items:start}
+.form h2{font-size:19px;font-weight:700;letter-spacing:-.03em}
+.form .lede{font-size:12.5px;color:var(--muted);margin:7px 0 22px;max-width:560px}
+.radios{display:flex;flex-direction:column;border:1px solid var(--rule2)}
+.radios label{display:flex;gap:11px;padding:11px 13px;border-bottom:1px solid var(--rule);cursor:pointer;font-size:13px}
+.radios label:last-child{border-bottom:0}
+.radios label:hover{background:var(--hover)}
+.radios label.on{background:var(--hover)}
+.radios label.on::after{content:"选中";margin-left:auto;font:400 10.5px/1 var(--mono);color:var(--faint);align-self:center}
+.radios input{appearance:none;width:12px;height:12px;border:1px solid var(--ink);margin-top:3px;flex:none;position:relative}
+.radios input:checked{background:var(--ink)}
+.radios span s{display:block;text-decoration:none;color:var(--muted);font-size:11.5px;margin-top:3px}
+.esthead{font-size:11.5px;color:var(--muted);margin-bottom:8px}
+.calc{border:1px solid var(--rule2)}
+.calc .r{display:flex;align-items:baseline;gap:12px;padding:9px 13px;border-bottom:1px solid var(--rule);font-size:12.5px}
+.calc .r:last-child{border-bottom:0}
+.calc .r span{color:var(--muted);flex:1}
+.calc .r b{font:400 12.5px/1 var(--mono);color:var(--ink2)}
+.calc .r i{font-style:normal;color:var(--faint);font-size:11.5px;min-width:84px;text-align:right}
+.calc .r.total{background:var(--hover)}
+.calc .r.total b{font:700 17px/1 var(--sans);color:var(--ink);letter-spacing:-.03em}
+.formfoot{display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:18px;border-top:1px solid var(--rule)}
+.formfoot .save{margin-left:auto;font:400 11.5px/1 var(--mono);color:var(--muted)}
+.formfoot .save b{color:var(--ink);font-weight:400}
+
+/* ── 历史 ─────────────────────────────────────────── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:26px}
+.two h3{font-size:13px;font-weight:600;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.hitem{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.hitem .v{font:500 12px/1.6 var(--mono);flex:none;width:44px}
+.hitem .c{flex:1;font-size:12.5px}
+.hitem .c s{display:block;text-decoration:none;color:var(--muted);font-size:11.5px;margin-top:3px}
+.hitem .t{font:400 11.5px/1.6 var(--mono);color:var(--faint);flex:none}
+.hitem .r{font-size:11.5px;color:var(--muted);flex:none;width:88px;text-align:right}
+.recent{margin-top:18px}
+.recent h3{font-size:13px;font-weight:600;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.arow{display:flex;gap:16px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule);font-size:12.5px}
+.arow .t{font:400 11.5px/1.6 var(--mono);color:var(--faint);flex:none;width:96px}
+.arow .c{flex:1}
+.arow .c s{text-decoration:none;color:var(--muted);margin-left:9px;font-size:11.5px}
+.arow .r{font-size:11.5px;color:var(--muted);flex:none}
+
+/* ── 状态行 ───────────────────────────────────────── */
+.statusline{display:flex;align-items:center;height:44px;border-top:1px solid var(--rule2);font-size:12px;color:var(--muted);
+            position:sticky;bottom:0;background:var(--paper)}
+.statusline .msg{display:none;align-items:center;gap:14px;color:var(--ink)}
+.statusline.flash .msg{display:flex}
+.statusline .msg button{font:400 12px/1 var(--mono);color:var(--ink);border-bottom:1px solid var(--ink);cursor:pointer}
+.statusline .base{display:flex;align-items:center;gap:16px;margin-left:auto;width:100%}
+.statusline.flash .base{display:none}
+
+/* ── 提示条（其他页面兜底） ───────────────────────── */
+.toast{position:fixed;left:40px;bottom:20px;z-index:60;background:var(--ink);color:var(--paper);
+       display:flex;align-items:center;gap:16px;padding:10px 14px;font-size:12.5px;opacity:0;pointer-events:none;
+       transition:opacity var(--fast) var(--ease),transform var(--fast) var(--ease);transform:translateY(8px);max-width:420px}
+.toast.on{opacity:1;transform:none;pointer-events:auto}
+.toast button{font:400 12px/1 var(--mono);color:var(--paper);border-bottom:1px solid var(--paper);cursor:pointer}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important}
+}

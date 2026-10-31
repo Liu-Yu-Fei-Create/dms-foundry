@@ -1,0 +1,267 @@
+{
+  "id": "human",
+  "name": "Homo sapiens",
+  "source": "Kazusa Codon Usage Database",
+  "source_url": "http://www.kazusa.or.jp/codon/cgi-bin/showcodon.cgi?species=9606&aa=1&style=N",
+  "retrieved": "2026-10-30",
+  "unit": "per_thousand",
+  "notes": "Kazusa 'Homo sapiens' summary table [gbpri]: 93,487 CDS / 40,662,582 codons. Frequencies are Kazusa per-thousand (count/total*1000), rounded to 1 decimal. 64 codons present; sum = 1000.2. Stop codons (TAA/TAG/TGA) carry aa='*'.",
+  "codons": {
+    "AAA": {
+      "aa": "K",
+      "freq": 24.4
+    },
+    "AAC": {
+      "aa": "N",
+      "freq": 19.1
+    },
+    "AAG": {
+      "aa": "K",
+      "freq": 31.9
+    },
+    "AAT": {
+      "aa": "N",
+      "freq": 17.0
+    },
+    "ACA": {
+      "aa": "T",
+      "freq": 15.1
+    },
+    "ACC": {
+      "aa": "T",
+      "freq": 18.9
+    },
+    "ACG": {
+      "aa": "T",
+      "freq": 6.1
+    },
+    "ACT": {
+      "aa": "T",
+      "freq": 13.1
+    },
+    "AGA": {
+      "aa": "R",
+      "freq": 12.2
+    },
+    "AGC": {
+      "aa": "S",
+      "freq": 19.5
+    },
+    "AGG": {
+      "aa": "R",
+      "freq": 12.0
+    },
+    "AGT": {
+      "aa": "S",
+      "freq": 12.1
+    },
+    "ATA": {
+      "aa": "I",
+      "freq": 7.5
+    },
+    "ATC": {
+      "aa": "I",
+      "freq": 20.8
+    },
+    "ATG": {
+      "aa": "M",
+      "freq": 22.0
+    },
+    "ATT": {
+      "aa": "I",
+      "freq": 16.0
+    },
+    "CAA": {
+      "aa": "Q",
+      "freq": 12.3
+    },
+    "CAC": {
+      "aa": "H",
+      "freq": 15.1
+    },
+    "CAG": {
+      "aa": "Q",
+      "freq": 34.2
+    },
+    "CAT": {
+      "aa": "H",
+      "freq": 10.9
+    },
+    "CCA": {
+      "aa": "P",
+      "freq": 16.9
+    },
+    "CCC": {
+      "aa": "P",
+      "freq": 19.8
+    },
+    "CCG": {
+      "aa": "P",
+      "freq": 6.9
+    },
+    "CCT": {
+      "aa": "P",
+      "freq": 17.5
+    },
+    "CGA": {
+      "aa": "R",
+      "freq": 6.2
+    },
+    "CGC": {
+      "aa": "R",
+      "freq": 10.4
+    },
+    "CGG": {
+      "aa": "R",
+      "freq": 11.4
+    },
+    "CGT": {
+      "aa": "R",
+      "freq": 4.5
+    },
+    "CTA": {
+      "aa": "L",
+      "freq": 7.2
+    },
+    "CTC": {
+      "aa": "L",
+      "freq": 19.6
+    },
+    "CTG": {
+      "aa": "L",
+      "freq": 39.6
+    },
+    "CTT": {
+      "aa": "L",
+      "freq": 13.2
+    },
+    "GAA": {
+      "aa": "E",
+      "freq": 29.0
+    },
+    "GAC": {
+      "aa": "D",
+      "freq": 25.1
+    },
+    "GAG": {
+      "aa": "E",
+      "freq": 39.6
+    },
+    "GAT": {
+      "aa": "D",
+      "freq": 21.8
+    },
+    "GCA": {
+      "aa": "A",
+      "freq": 15.8
+    },
+    "GCC": {
+      "aa": "A",
+      "freq": 27.7
+    },
+    "GCG": {
+      "aa": "A",
+      "freq": 7.4
+    },
+    "GCT": {
+      "aa": "A",
+      "freq": 18.4
+    },
+    "GGA": {
+      "aa": "G",
+      "freq": 16.5
+    },
+    "GGC": {
+      "aa": "G",
+      "freq": 22.2
+    },
+    "GGG": {
+      "aa": "G",
+      "freq": 16.5
+    },
+    "GGT": {
+      "aa": "G",
+      "freq": 10.8
+    },
+    "GTA": {
+      "aa": "V",
+      "freq": 7.1
+    },
+    "GTC": {
+      "aa": "V",
+      "freq": 14.5
+    },
+    "GTG": {
+      "aa": "V",
+      "freq": 28.1
+    },
+    "GTT": {
+      "aa": "V",
+      "freq": 11.0
+    },
+    "TAA": {
+      "aa": "*",
+      "freq": 1.0
+    },
+    "TAC": {
+      "aa": "Y",
+      "freq": 15.3
+    },
+    "TAG": {
+      "aa": "*",
+      "freq": 0.8
+    },
+    "TAT": {
+      "aa": "Y",
+      "freq": 12.2
+    },
+    "TCA": {
+      "aa": "S",
+      "freq": 12.2
+    },
+    "TCC": {
+      "aa": "S",
+      "freq": 17.7
+    },
+    "TCG": {
+      "aa": "S",
+      "freq": 4.4
+    },
+    "TCT": {
+      "aa": "S",
+      "freq": 15.2
+    },
+    "TGA": {
+      "aa": "*",
+      "freq": 1.6
+    },
+    "TGC": {
+      "aa": "C",
+      "freq": 12.6
+    },
+    "TGG": {
+      "aa": "W",
+      "freq": 13.2
+    },
+    "TGT": {
+      "aa": "C",
+      "freq": 10.6
+    },
+    "TTA": {
+      "aa": "L",
+      "freq": 7.7
+    },
+    "TTC": {
+      "aa": "F",
+      "freq": 20.3
+    },
+    "TTG": {
+      "aa": "L",
+      "freq": 12.9
+    },
+    "TTT": {
+      "aa": "F",
+      "freq": 17.6
+    }
+  }
+}

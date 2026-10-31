@@ -1,0 +1,2606 @@
+{
+  "version": 1,
+  "source": "Potapov V, Ong JL, Kucera RB, Langhorst BW, Bilotti K, Pryor JM, Cantor EJ, Canton B, Knight TF, Evans TC Jr, Lohman GJS (2018) Comprehensive profiling of four base overhang ligation fidelity by T4 DNA ligase and application to DNA assembly. ACS Synth Biol 7(11):2665-2674. Measured values taken from the reference data-analysis repository for that method (NEB / potapovneb ligase-fidelity workflow), b4 4-base-overhang example summary table.",
+  "source_url": "https://raw.githubusercontent.com/potapovneb/CP-LigaseFidelity/HEAD/example/03-summary/07_fidelity.csv",
+  "paper_url": "https://doi.org/10.1021/acssynbio.8b00333",
+  "retrieved": "2026-10-30",
+  "data_status": "measured",
+  "measurement": {
+    "enzyme": "T4 DNA ligase",
+    "assay": "multiplexed ligation assay on the b4 substrate (four randomized overhang bases flanked by fixed TCC/GGA), products read by PacBio SMRT sequencing",
+    "dataset": "b4 example dataset of the official workflow repository; raw reads at NCBI SRA PRJNA894239 (runs SRR22044163, SRR22044164)",
+    "condition": "NOT VERIFIED: the temperature/time of this example run is not stated in the source repository. The 2018 paper's default presentation condition is 25 C for 18 h; do not assume that value for these numbers.",
+    "fidelity_definition": "correct Watson-Crick ligation events / total ligation events observed for that overhang",
+    "counts": "raw observed ligation events (not normalized to 100000 events)",
+    "caveat": "For the 16 self-complementary overhangs the correct-ligation count is counted twice in the source summary (the self-pair appears twice in the 256x256 matrix), which slightly inflates their fidelity values relative to non-palindromic overhangs."
+  },
+  "rank_definition": "fidelity_rank 1 = highest measured fidelity among the 256 four-base overhangs",
+  "notes": "All 256 canonical 4-mers (A/C/G/T) are present with per-overhang measured fidelity. palindromic and self_complementary are equivalent for a 4-mer overhang: both mean reverse_complement(overhang) == overhang, i.e. the overhang can pair with a second copy of itself. The 16 such 4-mers are unusable as single junctions in one-pot Golden Gate assembly.",
+  "structural_rules": {
+    "palindromic_count": 16,
+    "palindromic_overhangs": [
+      "AATT",
+      "ACGT",
+      "AGCT",
+      "ATAT",
+      "CATG",
+      "CCGG",
+      "CGCG",
+      "CTAG",
+      "GATC",
+      "GCGC",
+      "GGCC",
+      "GTAC",
+      "TATA",
+      "TCGA",
+      "TGCA",
+      "TTAA"
+    ],
+    "rule": "A 4-nt overhang is palindromic/self-complementary iff it equals its own reverse complement; there are 4^2 = 16 such 4-mers. Exclude them from any overhang set.",
+    "length": 4,
+    "alphabet": "ACGT",
+    "count": 256
+  },
+  "overhangs": {
+    "AAAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 1,
+      "fidelity": 0.977804,
+      "total_ligations": 856,
+      "correct_ligations": 837,
+      "mismatch_ligations": 19,
+      "notes": ""
+    },
+    "AAAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 21,
+      "fidelity": 0.94245,
+      "total_ligations": 3510,
+      "correct_ligations": 3308,
+      "mismatch_ligations": 202,
+      "notes": ""
+    },
+    "AAAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 22,
+      "fidelity": 0.942249,
+      "total_ligations": 2632,
+      "correct_ligations": 2480,
+      "mismatch_ligations": 152,
+      "notes": ""
+    },
+    "AAAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 110,
+      "fidelity": 0.828386,
+      "total_ligations": 2156,
+      "correct_ligations": 1786,
+      "mismatch_ligations": 370,
+      "notes": ""
+    },
+    "AACA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 3,
+      "fidelity": 0.973887,
+      "total_ligations": 2987,
+      "correct_ligations": 2909,
+      "mismatch_ligations": 78,
+      "notes": ""
+    },
+    "AACC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 27,
+      "fidelity": 0.936165,
+      "total_ligations": 4073,
+      "correct_ligations": 3813,
+      "mismatch_ligations": 260,
+      "notes": ""
+    },
+    "AACG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 124,
+      "fidelity": 0.80629,
+      "total_ligations": 4197,
+      "correct_ligations": 3384,
+      "mismatch_ligations": 813,
+      "notes": ""
+    },
+    "AACT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 117,
+      "fidelity": 0.816785,
+      "total_ligations": 3515,
+      "correct_ligations": 2871,
+      "mismatch_ligations": 644,
+      "notes": ""
+    },
+    "AAGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 2,
+      "fidelity": 0.976933,
+      "total_ligations": 1604,
+      "correct_ligations": 1567,
+      "mismatch_ligations": 37,
+      "notes": ""
+    },
+    "AAGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 26,
+      "fidelity": 0.938012,
+      "total_ligations": 3904,
+      "correct_ligations": 3662,
+      "mismatch_ligations": 242,
+      "notes": ""
+    },
+    "AAGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 48,
+      "fidelity": 0.890091,
+      "total_ligations": 3421,
+      "correct_ligations": 3045,
+      "mismatch_ligations": 376,
+      "notes": ""
+    },
+    "AAGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 55,
+      "fidelity": 0.883792,
+      "total_ligations": 2289,
+      "correct_ligations": 2023,
+      "mismatch_ligations": 266,
+      "notes": ""
+    },
+    "AATA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 13,
+      "fidelity": 0.95806,
+      "total_ligations": 1526,
+      "correct_ligations": 1462,
+      "mismatch_ligations": 64,
+      "notes": ""
+    },
+    "AATC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 31,
+      "fidelity": 0.926036,
+      "total_ligations": 3042,
+      "correct_ligations": 2817,
+      "mismatch_ligations": 225,
+      "notes": ""
+    },
+    "AATG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 56,
+      "fidelity": 0.882457,
+      "total_ligations": 2833,
+      "correct_ligations": 2500,
+      "mismatch_ligations": 333,
+      "notes": ""
+    },
+    "AATT": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 38,
+      "fidelity": 0.909751,
+      "total_ligations": 1928,
+      "correct_ligations": 1754,
+      "mismatch_ligations": 174,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "ACAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 9,
+      "fidelity": 0.964586,
+      "total_ligations": 1666,
+      "correct_ligations": 1607,
+      "mismatch_ligations": 59,
+      "notes": ""
+    },
+    "ACAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 104,
+      "fidelity": 0.835484,
+      "total_ligations": 4340,
+      "correct_ligations": 3626,
+      "mismatch_ligations": 714,
+      "notes": ""
+    },
+    "ACAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 100,
+      "fidelity": 0.837385,
+      "total_ligations": 4237,
+      "correct_ligations": 3548,
+      "mismatch_ligations": 689,
+      "notes": ""
+    },
+    "ACAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 115,
+      "fidelity": 0.821977,
+      "total_ligations": 3449,
+      "correct_ligations": 2835,
+      "mismatch_ligations": 614,
+      "notes": ""
+    },
+    "ACCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 8,
+      "fidelity": 0.965986,
+      "total_ligations": 3822,
+      "correct_ligations": 3692,
+      "mismatch_ligations": 130,
+      "notes": ""
+    },
+    "ACCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 37,
+      "fidelity": 0.913754,
+      "total_ligations": 3977,
+      "correct_ligations": 3634,
+      "mismatch_ligations": 343,
+      "notes": ""
+    },
+    "ACCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 126,
+      "fidelity": 0.80399,
+      "total_ligations": 4862,
+      "correct_ligations": 3909,
+      "mismatch_ligations": 953,
+      "notes": ""
+    },
+    "ACCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 105,
+      "fidelity": 0.835274,
+      "total_ligations": 4037,
+      "correct_ligations": 3372,
+      "mismatch_ligations": 665,
+      "notes": ""
+    },
+    "ACGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 6,
+      "fidelity": 0.967047,
+      "total_ligations": 3156,
+      "correct_ligations": 3052,
+      "mismatch_ligations": 104,
+      "notes": ""
+    },
+    "ACGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 64,
+      "fidelity": 0.872895,
+      "total_ligations": 4217,
+      "correct_ligations": 3681,
+      "mismatch_ligations": 536,
+      "notes": ""
+    },
+    "ACGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 151,
+      "fidelity": 0.764196,
+      "total_ligations": 4614,
+      "correct_ligations": 3526,
+      "mismatch_ligations": 1088,
+      "notes": ""
+    },
+    "ACGT": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 99,
+      "fidelity": 0.837432,
+      "total_ligations": 2928,
+      "correct_ligations": 2452,
+      "mismatch_ligations": 476,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "ACTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 19,
+      "fidelity": 0.946188,
+      "total_ligations": 1784,
+      "correct_ligations": 1688,
+      "mismatch_ligations": 96,
+      "notes": ""
+    },
+    "ACTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 101,
+      "fidelity": 0.836656,
+      "total_ligations": 3612,
+      "correct_ligations": 3022,
+      "mismatch_ligations": 590,
+      "notes": ""
+    },
+    "ACTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 186,
+      "fidelity": 0.719857,
+      "total_ligations": 3077,
+      "correct_ligations": 2215,
+      "mismatch_ligations": 862,
+      "notes": ""
+    },
+    "ACTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 53,
+      "fidelity": 0.884952,
+      "total_ligations": 2286,
+      "correct_ligations": 2023,
+      "mismatch_ligations": 263,
+      "notes": ""
+    },
+    "AGAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 12,
+      "fidelity": 0.962819,
+      "total_ligations": 1802,
+      "correct_ligations": 1735,
+      "mismatch_ligations": 67,
+      "notes": ""
+    },
+    "AGAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 138,
+      "fidelity": 0.786479,
+      "total_ligations": 3831,
+      "correct_ligations": 3013,
+      "mismatch_ligations": 818,
+      "notes": ""
+    },
+    "AGAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 98,
+      "fidelity": 0.839989,
+      "total_ligations": 3481,
+      "correct_ligations": 2924,
+      "mismatch_ligations": 557,
+      "notes": ""
+    },
+    "AGAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 147,
+      "fidelity": 0.768724,
+      "total_ligations": 3645,
+      "correct_ligations": 2802,
+      "mismatch_ligations": 843,
+      "notes": ""
+    },
+    "AGCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 42,
+      "fidelity": 0.901524,
+      "total_ligations": 3412,
+      "correct_ligations": 3076,
+      "mismatch_ligations": 336,
+      "notes": ""
+    },
+    "AGCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 167,
+      "fidelity": 0.744843,
+      "total_ligations": 4072,
+      "correct_ligations": 3033,
+      "mismatch_ligations": 1039,
+      "notes": ""
+    },
+    "AGCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 230,
+      "fidelity": 0.588423,
+      "total_ligations": 5027,
+      "correct_ligations": 2958,
+      "mismatch_ligations": 2069,
+      "notes": ""
+    },
+    "AGCT": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 212,
+      "fidelity": 0.659885,
+      "total_ligations": 3834,
+      "correct_ligations": 2530,
+      "mismatch_ligations": 1304,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "AGGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 7,
+      "fidelity": 0.966808,
+      "total_ligations": 3073,
+      "correct_ligations": 2971,
+      "mismatch_ligations": 102,
+      "notes": ""
+    },
+    "AGGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 157,
+      "fidelity": 0.758499,
+      "total_ligations": 3971,
+      "correct_ligations": 3012,
+      "mismatch_ligations": 959,
+      "notes": ""
+    },
+    "AGGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 200,
+      "fidelity": 0.682868,
+      "total_ligations": 3724,
+      "correct_ligations": 2543,
+      "mismatch_ligations": 1181,
+      "notes": ""
+    },
+    "AGGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 127,
+      "fidelity": 0.803814,
+      "total_ligations": 4195,
+      "correct_ligations": 3372,
+      "mismatch_ligations": 823,
+      "notes": ""
+    },
+    "AGTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 24,
+      "fidelity": 0.941453,
+      "total_ligations": 2767,
+      "correct_ligations": 2605,
+      "mismatch_ligations": 162,
+      "notes": ""
+    },
+    "AGTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 116,
+      "fidelity": 0.820657,
+      "total_ligations": 3747,
+      "correct_ligations": 3075,
+      "mismatch_ligations": 672,
+      "notes": ""
+    },
+    "AGTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 129,
+      "fidelity": 0.796099,
+      "total_ligations": 2820,
+      "correct_ligations": 2245,
+      "mismatch_ligations": 575,
+      "notes": ""
+    },
+    "AGTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 79,
+      "fidelity": 0.85421,
+      "total_ligations": 3361,
+      "correct_ligations": 2871,
+      "mismatch_ligations": 490,
+      "notes": ""
+    },
+    "ATAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 23,
+      "fidelity": 0.941504,
+      "total_ligations": 718,
+      "correct_ligations": 676,
+      "mismatch_ligations": 42,
+      "notes": ""
+    },
+    "ATAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 51,
+      "fidelity": 0.887101,
+      "total_ligations": 3419,
+      "correct_ligations": 3033,
+      "mismatch_ligations": 386,
+      "notes": ""
+    },
+    "ATAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 47,
+      "fidelity": 0.894641,
+      "total_ligations": 2743,
+      "correct_ligations": 2454,
+      "mismatch_ligations": 289,
+      "notes": ""
+    },
+    "ATAT": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 44,
+      "fidelity": 0.897207,
+      "total_ligations": 1683,
+      "correct_ligations": 1510,
+      "mismatch_ligations": 173,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "ATCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 18,
+      "fidelity": 0.948347,
+      "total_ligations": 2904,
+      "correct_ligations": 2754,
+      "mismatch_ligations": 150,
+      "notes": ""
+    },
+    "ATCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 35,
+      "fidelity": 0.917398,
+      "total_ligations": 3874,
+      "correct_ligations": 3554,
+      "mismatch_ligations": 320,
+      "notes": ""
+    },
+    "ATCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 118,
+      "fidelity": 0.816416,
+      "total_ligations": 4325,
+      "correct_ligations": 3531,
+      "mismatch_ligations": 794,
+      "notes": ""
+    },
+    "ATCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 88,
+      "fidelity": 0.846014,
+      "total_ligations": 3312,
+      "correct_ligations": 2802,
+      "mismatch_ligations": 510,
+      "notes": ""
+    },
+    "ATGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 20,
+      "fidelity": 0.942661,
+      "total_ligations": 2180,
+      "correct_ligations": 2055,
+      "mismatch_ligations": 125,
+      "notes": ""
+    },
+    "ATGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 119,
+      "fidelity": 0.813048,
+      "total_ligations": 3878,
+      "correct_ligations": 3153,
+      "mismatch_ligations": 725,
+      "notes": ""
+    },
+    "ATGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 130,
+      "fidelity": 0.793414,
+      "total_ligations": 3219,
+      "correct_ligations": 2554,
+      "mismatch_ligations": 665,
+      "notes": ""
+    },
+    "ATGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 52,
+      "fidelity": 0.886214,
+      "total_ligations": 3199,
+      "correct_ligations": 2835,
+      "mismatch_ligations": 364,
+      "notes": ""
+    },
+    "ATTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 34,
+      "fidelity": 0.917722,
+      "total_ligations": 1580,
+      "correct_ligations": 1450,
+      "mismatch_ligations": 130,
+      "notes": ""
+    },
+    "ATTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 81,
+      "fidelity": 0.852503,
+      "total_ligations": 3356,
+      "correct_ligations": 2861,
+      "mismatch_ligations": 495,
+      "notes": ""
+    },
+    "ATTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 106,
+      "fidelity": 0.833939,
+      "total_ligations": 3029,
+      "correct_ligations": 2526,
+      "mismatch_ligations": 503,
+      "notes": ""
+    },
+    "ATTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 68,
+      "fidelity": 0.86657,
+      "total_ligations": 2061,
+      "correct_ligations": 1786,
+      "mismatch_ligations": 275,
+      "notes": ""
+    },
+    "CAAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 11,
+      "fidelity": 0.963542,
+      "total_ligations": 1920,
+      "correct_ligations": 1850,
+      "mismatch_ligations": 70,
+      "notes": ""
+    },
+    "CAAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 30,
+      "fidelity": 0.929069,
+      "total_ligations": 3736,
+      "correct_ligations": 3471,
+      "mismatch_ligations": 265,
+      "notes": ""
+    },
+    "CAAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 73,
+      "fidelity": 0.863795,
+      "total_ligations": 2577,
+      "correct_ligations": 2226,
+      "mismatch_ligations": 351,
+      "notes": ""
+    },
+    "CAAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 97,
+      "fidelity": 0.842,
+      "total_ligations": 3000,
+      "correct_ligations": 2526,
+      "mismatch_ligations": 474,
+      "notes": ""
+    },
+    "CACA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 41,
+      "fidelity": 0.905489,
+      "total_ligations": 3862,
+      "correct_ligations": 3497,
+      "mismatch_ligations": 365,
+      "notes": ""
+    },
+    "CACC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 66,
+      "fidelity": 0.869443,
+      "total_ligations": 3914,
+      "correct_ligations": 3403,
+      "mismatch_ligations": 511,
+      "notes": ""
+    },
+    "CACG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 195,
+      "fidelity": 0.710641,
+      "total_ligations": 4351,
+      "correct_ligations": 3092,
+      "mismatch_ligations": 1259,
+      "notes": ""
+    },
+    "CACT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 222,
+      "fidelity": 0.625522,
+      "total_ligations": 3589,
+      "correct_ligations": 2245,
+      "mismatch_ligations": 1344,
+      "notes": ""
+    },
+    "CAGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 17,
+      "fidelity": 0.951463,
+      "total_ligations": 3008,
+      "correct_ligations": 2862,
+      "mismatch_ligations": 146,
+      "notes": ""
+    },
+    "CAGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 62,
+      "fidelity": 0.874529,
+      "total_ligations": 3977,
+      "correct_ligations": 3478,
+      "mismatch_ligations": 499,
+      "notes": ""
+    },
+    "CAGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 153,
+      "fidelity": 0.75954,
+      "total_ligations": 3826,
+      "correct_ligations": 2906,
+      "mismatch_ligations": 920,
+      "notes": ""
+    },
+    "CAGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 76,
+      "fidelity": 0.861198,
+      "total_ligations": 2572,
+      "correct_ligations": 2215,
+      "mismatch_ligations": 357,
+      "notes": ""
+    },
+    "CATA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 57,
+      "fidelity": 0.879593,
+      "total_ligations": 2749,
+      "correct_ligations": 2418,
+      "mismatch_ligations": 331,
+      "notes": ""
+    },
+    "CATC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 182,
+      "fidelity": 0.725193,
+      "total_ligations": 4414,
+      "correct_ligations": 3201,
+      "mismatch_ligations": 1213,
+      "notes": ""
+    },
+    "CATG": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 180,
+      "fidelity": 0.729255,
+      "total_ligations": 3760,
+      "correct_ligations": 2742,
+      "mismatch_ligations": 1018,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "CATT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 166,
+      "fidelity": 0.746714,
+      "total_ligations": 3348,
+      "correct_ligations": 2500,
+      "mismatch_ligations": 848,
+      "notes": ""
+    },
+    "CCAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 5,
+      "fidelity": 0.967371,
+      "total_ligations": 2697,
+      "correct_ligations": 2609,
+      "mismatch_ligations": 88,
+      "notes": ""
+    },
+    "CCAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 71,
+      "fidelity": 0.863971,
+      "total_ligations": 3536,
+      "correct_ligations": 3055,
+      "mismatch_ligations": 481,
+      "notes": ""
+    },
+    "CCAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 54,
+      "fidelity": 0.884238,
+      "total_ligations": 3464,
+      "correct_ligations": 3063,
+      "mismatch_ligations": 401,
+      "notes": ""
+    },
+    "CCAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 96,
+      "fidelity": 0.842348,
+      "total_ligations": 3032,
+      "correct_ligations": 2554,
+      "mismatch_ligations": 478,
+      "notes": ""
+    },
+    "CCCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 28,
+      "fidelity": 0.935958,
+      "total_ligations": 3201,
+      "correct_ligations": 2996,
+      "mismatch_ligations": 205,
+      "notes": ""
+    },
+    "CCCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 33,
+      "fidelity": 0.91791,
+      "total_ligations": 2412,
+      "correct_ligations": 2214,
+      "mismatch_ligations": 198,
+      "notes": ""
+    },
+    "CCCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 162,
+      "fidelity": 0.752742,
+      "total_ligations": 3191,
+      "correct_ligations": 2402,
+      "mismatch_ligations": 789,
+      "notes": ""
+    },
+    "CCCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 170,
+      "fidelity": 0.743567,
+      "total_ligations": 3420,
+      "correct_ligations": 2543,
+      "mismatch_ligations": 877,
+      "notes": ""
+    },
+    "CCGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 40,
+      "fidelity": 0.906811,
+      "total_ligations": 3509,
+      "correct_ligations": 3182,
+      "mismatch_ligations": 327,
+      "notes": ""
+    },
+    "CCGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 160,
+      "fidelity": 0.755416,
+      "total_ligations": 3185,
+      "correct_ligations": 2406,
+      "mismatch_ligations": 779,
+      "notes": ""
+    },
+    "CCGG": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 210,
+      "fidelity": 0.66471,
+      "total_ligations": 4429,
+      "correct_ligations": 2944,
+      "mismatch_ligations": 1485,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "CCGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 135,
+      "fidelity": 0.790406,
+      "total_ligations": 4461,
+      "correct_ligations": 3526,
+      "mismatch_ligations": 935,
+      "notes": ""
+    },
+    "CCTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 93,
+      "fidelity": 0.843281,
+      "total_ligations": 2463,
+      "correct_ligations": 2077,
+      "mismatch_ligations": 386,
+      "notes": ""
+    },
+    "CCTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 193,
+      "fidelity": 0.711352,
+      "total_ligations": 3409,
+      "correct_ligations": 2425,
+      "mismatch_ligations": 984,
+      "notes": ""
+    },
+    "CCTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 185,
+      "fidelity": 0.721988,
+      "total_ligations": 4025,
+      "correct_ligations": 2906,
+      "mismatch_ligations": 1119,
+      "notes": ""
+    },
+    "CCTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 142,
+      "fidelity": 0.777579,
+      "total_ligations": 3916,
+      "correct_ligations": 3045,
+      "mismatch_ligations": 871,
+      "notes": ""
+    },
+    "CGAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 14,
+      "fidelity": 0.957902,
+      "total_ligations": 2993,
+      "correct_ligations": 2867,
+      "mismatch_ligations": 126,
+      "notes": ""
+    },
+    "CGAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 187,
+      "fidelity": 0.71804,
+      "total_ligations": 3919,
+      "correct_ligations": 2814,
+      "mismatch_ligations": 1105,
+      "notes": ""
+    },
+    "CGAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 190,
+      "fidelity": 0.713893,
+      "total_ligations": 3275,
+      "correct_ligations": 2338,
+      "mismatch_ligations": 937,
+      "notes": ""
+    },
+    "CGAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 154,
+      "fidelity": 0.759355,
+      "total_ligations": 4650,
+      "correct_ligations": 3531,
+      "mismatch_ligations": 1119,
+      "notes": ""
+    },
+    "CGCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 91,
+      "fidelity": 0.844077,
+      "total_ligations": 3444,
+      "correct_ligations": 2907,
+      "mismatch_ligations": 537,
+      "notes": ""
+    },
+    "CGCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 216,
+      "fidelity": 0.645839,
+      "total_ligations": 3473,
+      "correct_ligations": 2243,
+      "mismatch_ligations": 1230,
+      "notes": ""
+    },
+    "CGCG": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 252,
+      "fidelity": 0.450777,
+      "total_ligations": 4246,
+      "correct_ligations": 1914,
+      "mismatch_ligations": 2332,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "CGCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 224,
+      "fidelity": 0.622737,
+      "total_ligations": 4750,
+      "correct_ligations": 2958,
+      "mismatch_ligations": 1792,
+      "notes": ""
+    },
+    "CGGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 45,
+      "fidelity": 0.895987,
+      "total_ligations": 3663,
+      "correct_ligations": 3282,
+      "mismatch_ligations": 381,
+      "notes": ""
+    },
+    "CGGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 228,
+      "fidelity": 0.603847,
+      "total_ligations": 4107,
+      "correct_ligations": 2480,
+      "mismatch_ligations": 1627,
+      "notes": ""
+    },
+    "CGGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 243,
+      "fidelity": 0.53224,
+      "total_ligations": 4513,
+      "correct_ligations": 2402,
+      "mismatch_ligations": 2111,
+      "notes": ""
+    },
+    "CGGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 192,
+      "fidelity": 0.711374,
+      "total_ligations": 5495,
+      "correct_ligations": 3909,
+      "mismatch_ligations": 1586,
+      "notes": ""
+    },
+    "CGTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 69,
+      "fidelity": 0.866089,
+      "total_ligations": 4040,
+      "correct_ligations": 3499,
+      "mismatch_ligations": 541,
+      "notes": ""
+    },
+    "CGTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 197,
+      "fidelity": 0.685489,
+      "total_ligations": 4321,
+      "correct_ligations": 2962,
+      "mismatch_ligations": 1359,
+      "notes": ""
+    },
+    "CGTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 213,
+      "fidelity": 0.653562,
+      "total_ligations": 4731,
+      "correct_ligations": 3092,
+      "mismatch_ligations": 1639,
+      "notes": ""
+    },
+    "CGTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 174,
+      "fidelity": 0.737898,
+      "total_ligations": 4586,
+      "correct_ligations": 3384,
+      "mismatch_ligations": 1202,
+      "notes": ""
+    },
+    "CTAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 32,
+      "fidelity": 0.919864,
+      "total_ligations": 1173,
+      "correct_ligations": 1079,
+      "mismatch_ligations": 94,
+      "notes": ""
+    },
+    "CTAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 112,
+      "fidelity": 0.827007,
+      "total_ligations": 3688,
+      "correct_ligations": 3050,
+      "mismatch_ligations": 638,
+      "notes": ""
+    },
+    "CTAG": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 134,
+      "fidelity": 0.790486,
+      "total_ligations": 1976,
+      "correct_ligations": 1562,
+      "mismatch_ligations": 414,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "CTAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 49,
+      "fidelity": 0.88913,
+      "total_ligations": 2760,
+      "correct_ligations": 2454,
+      "mismatch_ligations": 306,
+      "notes": ""
+    },
+    "CTCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 74,
+      "fidelity": 0.862628,
+      "total_ligations": 3021,
+      "correct_ligations": 2606,
+      "mismatch_ligations": 415,
+      "notes": ""
+    },
+    "CTCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 156,
+      "fidelity": 0.758877,
+      "total_ligations": 3098,
+      "correct_ligations": 2351,
+      "mismatch_ligations": 747,
+      "notes": ""
+    },
+    "CTCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 179,
+      "fidelity": 0.729258,
+      "total_ligations": 3206,
+      "correct_ligations": 2338,
+      "mismatch_ligations": 868,
+      "notes": ""
+    },
+    "CTCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 175,
+      "fidelity": 0.734858,
+      "total_ligations": 3979,
+      "correct_ligations": 2924,
+      "mismatch_ligations": 1055,
+      "notes": ""
+    },
+    "CTGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 87,
+      "fidelity": 0.84787,
+      "total_ligations": 2958,
+      "correct_ligations": 2508,
+      "mismatch_ligations": 450,
+      "notes": ""
+    },
+    "CTGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 199,
+      "fidelity": 0.683217,
+      "total_ligations": 4290,
+      "correct_ligations": 2931,
+      "mismatch_ligations": 1359,
+      "notes": ""
+    },
+    "CTGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 205,
+      "fidelity": 0.674373,
+      "total_ligations": 4542,
+      "correct_ligations": 3063,
+      "mismatch_ligations": 1479,
+      "notes": ""
+    },
+    "CTGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 141,
+      "fidelity": 0.78081,
+      "total_ligations": 4544,
+      "correct_ligations": 3548,
+      "mismatch_ligations": 996,
+      "notes": ""
+    },
+    "CTTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 94,
+      "fidelity": 0.842751,
+      "total_ligations": 1876,
+      "correct_ligations": 1581,
+      "mismatch_ligations": 295,
+      "notes": ""
+    },
+    "CTTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 194,
+      "fidelity": 0.711237,
+      "total_ligations": 3702,
+      "correct_ligations": 2633,
+      "mismatch_ligations": 1069,
+      "notes": ""
+    },
+    "CTTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 177,
+      "fidelity": 0.730794,
+      "total_ligations": 3046,
+      "correct_ligations": 2226,
+      "mismatch_ligations": 820,
+      "notes": ""
+    },
+    "CTTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 149,
+      "fidelity": 0.76496,
+      "total_ligations": 3242,
+      "correct_ligations": 2480,
+      "mismatch_ligations": 762,
+      "notes": ""
+    },
+    "GAAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 10,
+      "fidelity": 0.964103,
+      "total_ligations": 2145,
+      "correct_ligations": 2068,
+      "mismatch_ligations": 77,
+      "notes": ""
+    },
+    "GAAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 143,
+      "fidelity": 0.77526,
+      "total_ligations": 3751,
+      "correct_ligations": 2908,
+      "mismatch_ligations": 843,
+      "notes": ""
+    },
+    "GAAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 132,
+      "fidelity": 0.792356,
+      "total_ligations": 3323,
+      "correct_ligations": 2633,
+      "mismatch_ligations": 690,
+      "notes": ""
+    },
+    "GAAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 168,
+      "fidelity": 0.744277,
+      "total_ligations": 3844,
+      "correct_ligations": 2861,
+      "mismatch_ligations": 983,
+      "notes": ""
+    },
+    "GACA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 39,
+      "fidelity": 0.907436,
+      "total_ligations": 3846,
+      "correct_ligations": 3490,
+      "mismatch_ligations": 356,
+      "notes": ""
+    },
+    "GACC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 209,
+      "fidelity": 0.670525,
+      "total_ligations": 4061,
+      "correct_ligations": 2723,
+      "mismatch_ligations": 1338,
+      "notes": ""
+    },
+    "GACG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 233,
+      "fidelity": 0.575928,
+      "total_ligations": 5143,
+      "correct_ligations": 2962,
+      "mismatch_ligations": 2181,
+      "notes": ""
+    },
+    "GACT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 225,
+      "fidelity": 0.620836,
+      "total_ligations": 4953,
+      "correct_ligations": 3075,
+      "mismatch_ligations": 1878,
+      "notes": ""
+    },
+    "GAGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 15,
+      "fidelity": 0.955052,
+      "total_ligations": 2959,
+      "correct_ligations": 2826,
+      "mismatch_ligations": 133,
+      "notes": ""
+    },
+    "GAGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 171,
+      "fidelity": 0.741305,
+      "total_ligations": 4198,
+      "correct_ligations": 3112,
+      "mismatch_ligations": 1086,
+      "notes": ""
+    },
+    "GAGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 220,
+      "fidelity": 0.630198,
+      "total_ligations": 3848,
+      "correct_ligations": 2425,
+      "mismatch_ligations": 1423,
+      "notes": ""
+    },
+    "GAGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 173,
+      "fidelity": 0.740868,
+      "total_ligations": 4079,
+      "correct_ligations": 3022,
+      "mismatch_ligations": 1057,
+      "notes": ""
+    },
+    "GATA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 29,
+      "fidelity": 0.932527,
+      "total_ligations": 3142,
+      "correct_ligations": 2930,
+      "mismatch_ligations": 212,
+      "notes": ""
+    },
+    "GATC": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 191,
+      "fidelity": 0.713474,
+      "total_ligations": 3874,
+      "correct_ligations": 2764,
+      "mismatch_ligations": 1110,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "GATG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 201,
+      "fidelity": 0.681644,
+      "total_ligations": 4696,
+      "correct_ligations": 3201,
+      "mismatch_ligations": 1495,
+      "notes": ""
+    },
+    "GATT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 152,
+      "fidelity": 0.763622,
+      "total_ligations": 3689,
+      "correct_ligations": 2817,
+      "mismatch_ligations": 872,
+      "notes": ""
+    },
+    "GCAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 4,
+      "fidelity": 0.968153,
+      "total_ligations": 2983,
+      "correct_ligations": 2888,
+      "mismatch_ligations": 95,
+      "notes": ""
+    },
+    "GCAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 204,
+      "fidelity": 0.675648,
+      "total_ligations": 3860,
+      "correct_ligations": 2608,
+      "mismatch_ligations": 1252,
+      "notes": ""
+    },
+    "GCAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 183,
+      "fidelity": 0.724061,
+      "total_ligations": 4048,
+      "correct_ligations": 2931,
+      "mismatch_ligations": 1117,
+      "notes": ""
+    },
+    "GCAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 203,
+      "fidelity": 0.677482,
+      "total_ligations": 4654,
+      "correct_ligations": 3153,
+      "mismatch_ligations": 1501,
+      "notes": ""
+    },
+    "GCCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 159,
+      "fidelity": 0.755828,
+      "total_ligations": 4161,
+      "correct_ligations": 3145,
+      "mismatch_ligations": 1016,
+      "notes": ""
+    },
+    "GCCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 240,
+      "fidelity": 0.541353,
+      "total_ligations": 3857,
+      "correct_ligations": 2088,
+      "mismatch_ligations": 1769,
+      "notes": ""
+    },
+    "GCCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 241,
+      "fidelity": 0.5361,
+      "total_ligations": 4626,
+      "correct_ligations": 2480,
+      "mismatch_ligations": 2146,
+      "notes": ""
+    },
+    "GCCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 234,
+      "fidelity": 0.575248,
+      "total_ligations": 5236,
+      "correct_ligations": 3012,
+      "mismatch_ligations": 2224,
+      "notes": ""
+    },
+    "GCGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 108,
+      "fidelity": 0.833534,
+      "total_ligations": 3316,
+      "correct_ligations": 2764,
+      "mismatch_ligations": 552,
+      "notes": ""
+    },
+    "GCGC": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 239,
+      "fidelity": 0.542423,
+      "total_ligations": 4019,
+      "correct_ligations": 2180,
+      "mismatch_ligations": 1839,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "GCGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 247,
+      "fidelity": 0.514652,
+      "total_ligations": 4675,
+      "correct_ligations": 2406,
+      "mismatch_ligations": 2269,
+      "notes": ""
+    },
+    "GCGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 214,
+      "fidelity": 0.648863,
+      "total_ligations": 5673,
+      "correct_ligations": 3681,
+      "mismatch_ligations": 1992,
+      "notes": ""
+    },
+    "GCTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 70,
+      "fidelity": 0.865359,
+      "total_ligations": 3721,
+      "correct_ligations": 3220,
+      "mismatch_ligations": 501,
+      "notes": ""
+    },
+    "GCTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 219,
+      "fidelity": 0.638097,
+      "total_ligations": 4877,
+      "correct_ligations": 3112,
+      "mismatch_ligations": 1765,
+      "notes": ""
+    },
+    "GCTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 217,
+      "fidelity": 0.643716,
+      "total_ligations": 5403,
+      "correct_ligations": 3478,
+      "mismatch_ligations": 1925,
+      "notes": ""
+    },
+    "GCTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 188,
+      "fidelity": 0.714816,
+      "total_ligations": 5123,
+      "correct_ligations": 3662,
+      "mismatch_ligations": 1461,
+      "notes": ""
+    },
+    "GGAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 25,
+      "fidelity": 0.940415,
+      "total_ligations": 3474,
+      "correct_ligations": 3267,
+      "mismatch_ligations": 207,
+      "notes": ""
+    },
+    "GGAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 249,
+      "fidelity": 0.494274,
+      "total_ligations": 4803,
+      "correct_ligations": 2374,
+      "mismatch_ligations": 2429,
+      "notes": ""
+    },
+    "GGAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 245,
+      "fidelity": 0.530939,
+      "total_ligations": 4428,
+      "correct_ligations": 2351,
+      "mismatch_ligations": 2077,
+      "notes": ""
+    },
+    "GGAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 227,
+      "fidelity": 0.606795,
+      "total_ligations": 5857,
+      "correct_ligations": 3554,
+      "mismatch_ligations": 2303,
+      "notes": ""
+    },
+    "GGCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 218,
+      "fidelity": 0.643376,
+      "total_ligations": 4680,
+      "correct_ligations": 3011,
+      "mismatch_ligations": 1669,
+      "notes": ""
+    },
+    "GGCC": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 255,
+      "fidelity": 0.412426,
+      "total_ligations": 5247,
+      "correct_ligations": 2164,
+      "mismatch_ligations": 3083,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "GGCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 256,
+      "fidelity": 0.371542,
+      "total_ligations": 6037,
+      "correct_ligations": 2243,
+      "mismatch_ligations": 3794,
+      "notes": ""
+    },
+    "GGCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 251,
+      "fidelity": 0.456433,
+      "total_ligations": 6645,
+      "correct_ligations": 3033,
+      "mismatch_ligations": 3612,
+      "notes": ""
+    },
+    "GGGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 109,
+      "fidelity": 0.832598,
+      "total_ligations": 3172,
+      "correct_ligations": 2641,
+      "mismatch_ligations": 531,
+      "notes": ""
+    },
+    "GGGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 254,
+      "fidelity": 0.418605,
+      "total_ligations": 4988,
+      "correct_ligations": 2088,
+      "mismatch_ligations": 2900,
+      "notes": ""
+    },
+    "GGGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 253,
+      "fidelity": 0.419477,
+      "total_ligations": 5278,
+      "correct_ligations": 2214,
+      "mismatch_ligations": 3064,
+      "notes": ""
+    },
+    "GGGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 237,
+      "fidelity": 0.559249,
+      "total_ligations": 6498,
+      "correct_ligations": 3634,
+      "mismatch_ligations": 2864,
+      "notes": ""
+    },
+    "GGTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 86,
+      "fidelity": 0.848368,
+      "total_ligations": 4412,
+      "correct_ligations": 3743,
+      "mismatch_ligations": 669,
+      "notes": ""
+    },
+    "GGTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 242,
+      "fidelity": 0.533817,
+      "total_ligations": 5101,
+      "correct_ligations": 2723,
+      "mismatch_ligations": 2378,
+      "notes": ""
+    },
+    "GGTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 250,
+      "fidelity": 0.487676,
+      "total_ligations": 6978,
+      "correct_ligations": 3403,
+      "mismatch_ligations": 3575,
+      "notes": ""
+    },
+    "GGTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 207,
+      "fidelity": 0.671539,
+      "total_ligations": 5678,
+      "correct_ligations": 3813,
+      "mismatch_ligations": 1865,
+      "notes": ""
+    },
+    "GTAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 16,
+      "fidelity": 0.952193,
+      "total_ligations": 2029,
+      "correct_ligations": 1932,
+      "mismatch_ligations": 97,
+      "notes": ""
+    },
+    "GTAC": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 165,
+      "fidelity": 0.746763,
+      "total_ligations": 3321,
+      "correct_ligations": 2480,
+      "mismatch_ligations": 841,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "GTAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 131,
+      "fidelity": 0.793238,
+      "total_ligations": 3845,
+      "correct_ligations": 3050,
+      "mismatch_ligations": 795,
+      "notes": ""
+    },
+    "GTAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 75,
+      "fidelity": 0.861403,
+      "total_ligations": 3521,
+      "correct_ligations": 3033,
+      "mismatch_ligations": 488,
+      "notes": ""
+    },
+    "GTCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 161,
+      "fidelity": 0.753425,
+      "total_ligations": 3796,
+      "correct_ligations": 2860,
+      "mismatch_ligations": 936,
+      "notes": ""
+    },
+    "GTCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 238,
+      "fidelity": 0.558588,
+      "total_ligations": 4250,
+      "correct_ligations": 2374,
+      "mismatch_ligations": 1876,
+      "notes": ""
+    },
+    "GTCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 244,
+      "fidelity": 0.531847,
+      "total_ligations": 5291,
+      "correct_ligations": 2814,
+      "mismatch_ligations": 2477,
+      "notes": ""
+    },
+    "GTCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 229,
+      "fidelity": 0.594749,
+      "total_ligations": 5066,
+      "correct_ligations": 3013,
+      "mismatch_ligations": 2053,
+      "notes": ""
+    },
+    "GTGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 102,
+      "fidelity": 0.836226,
+      "total_ligations": 4091,
+      "correct_ligations": 3421,
+      "mismatch_ligations": 670,
+      "notes": ""
+    },
+    "GTGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 246,
+      "fidelity": 0.526125,
+      "total_ligations": 4957,
+      "correct_ligations": 2608,
+      "mismatch_ligations": 2349,
+      "notes": ""
+    },
+    "GTGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 235,
+      "fidelity": 0.572526,
+      "total_ligations": 5336,
+      "correct_ligations": 3055,
+      "mismatch_ligations": 2281,
+      "notes": ""
+    },
+    "GTGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 198,
+      "fidelity": 0.685056,
+      "total_ligations": 5293,
+      "correct_ligations": 3626,
+      "mismatch_ligations": 1667,
+      "notes": ""
+    },
+    "GTTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 89,
+      "fidelity": 0.845543,
+      "total_ligations": 3276,
+      "correct_ligations": 2770,
+      "mismatch_ligations": 506,
+      "notes": ""
+    },
+    "GTTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 223,
+      "fidelity": 0.622965,
+      "total_ligations": 4668,
+      "correct_ligations": 2908,
+      "mismatch_ligations": 1760,
+      "notes": ""
+    },
+    "GTTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 215,
+      "fidelity": 0.64673,
+      "total_ligations": 5367,
+      "correct_ligations": 3471,
+      "mismatch_ligations": 1896,
+      "notes": ""
+    },
+    "GTTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 189,
+      "fidelity": 0.714625,
+      "total_ligations": 4629,
+      "correct_ligations": 3308,
+      "mismatch_ligations": 1321,
+      "notes": ""
+    },
+    "TAAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 63,
+      "fidelity": 0.873112,
+      "total_ligations": 331,
+      "correct_ligations": 289,
+      "mismatch_ligations": 42,
+      "notes": ""
+    },
+    "TAAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 146,
+      "fidelity": 0.770515,
+      "total_ligations": 3595,
+      "correct_ligations": 2770,
+      "mismatch_ligations": 825,
+      "notes": ""
+    },
+    "TAAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 139,
+      "fidelity": 0.785395,
+      "total_ligations": 2013,
+      "correct_ligations": 1581,
+      "mismatch_ligations": 432,
+      "notes": ""
+    },
+    "TAAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 155,
+      "fidelity": 0.759162,
+      "total_ligations": 1910,
+      "correct_ligations": 1450,
+      "mismatch_ligations": 460,
+      "notes": ""
+    },
+    "TACA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 50,
+      "fidelity": 0.887646,
+      "total_ligations": 2056,
+      "correct_ligations": 1825,
+      "mismatch_ligations": 231,
+      "notes": ""
+    },
+    "TACC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 150,
+      "fidelity": 0.764814,
+      "total_ligations": 4894,
+      "correct_ligations": 3743,
+      "mismatch_ligations": 1151,
+      "notes": ""
+    },
+    "TACG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 178,
+      "fidelity": 0.730023,
+      "total_ligations": 4793,
+      "correct_ligations": 3499,
+      "mismatch_ligations": 1294,
+      "notes": ""
+    },
+    "TACT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 140,
+      "fidelity": 0.784402,
+      "total_ligations": 3321,
+      "correct_ligations": 2605,
+      "mismatch_ligations": 716,
+      "notes": ""
+    },
+    "TAGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 60,
+      "fidelity": 0.877266,
+      "total_ligations": 717,
+      "correct_ligations": 629,
+      "mismatch_ligations": 88,
+      "notes": ""
+    },
+    "TAGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 163,
+      "fidelity": 0.751985,
+      "total_ligations": 4282,
+      "correct_ligations": 3220,
+      "mismatch_ligations": 1062,
+      "notes": ""
+    },
+    "TAGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 172,
+      "fidelity": 0.740992,
+      "total_ligations": 2803,
+      "correct_ligations": 2077,
+      "mismatch_ligations": 726,
+      "notes": ""
+    },
+    "TAGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 137,
+      "fidelity": 0.787681,
+      "total_ligations": 2143,
+      "correct_ligations": 1688,
+      "mismatch_ligations": 455,
+      "notes": ""
+    },
+    "TATA": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 120,
+      "fidelity": 0.810631,
+      "total_ligations": 602,
+      "correct_ligations": 488,
+      "mismatch_ligations": 114,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "TATC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 133,
+      "fidelity": 0.79232,
+      "total_ligations": 3698,
+      "correct_ligations": 2930,
+      "mismatch_ligations": 768,
+      "notes": ""
+    },
+    "TATG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 148,
+      "fidelity": 0.767619,
+      "total_ligations": 3150,
+      "correct_ligations": 2418,
+      "mismatch_ligations": 732,
+      "notes": ""
+    },
+    "TATT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 82,
+      "fidelity": 0.851485,
+      "total_ligations": 1717,
+      "correct_ligations": 1462,
+      "mismatch_ligations": 255,
+      "notes": ""
+    },
+    "TCAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 36,
+      "fidelity": 0.916545,
+      "total_ligations": 683,
+      "correct_ligations": 626,
+      "mismatch_ligations": 57,
+      "notes": ""
+    },
+    "TCAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 136,
+      "fidelity": 0.789887,
+      "total_ligations": 4331,
+      "correct_ligations": 3421,
+      "mismatch_ligations": 910,
+      "notes": ""
+    },
+    "TCAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 125,
+      "fidelity": 0.804878,
+      "total_ligations": 3116,
+      "correct_ligations": 2508,
+      "mismatch_ligations": 608,
+      "notes": ""
+    },
+    "TCAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 128,
+      "fidelity": 0.796203,
+      "total_ligations": 2581,
+      "correct_ligations": 2055,
+      "mismatch_ligations": 526,
+      "notes": ""
+    },
+    "TCCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 80,
+      "fidelity": 0.854054,
+      "total_ligations": 2590,
+      "correct_ligations": 2212,
+      "mismatch_ligations": 378,
+      "notes": ""
+    },
+    "TCCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 169,
+      "fidelity": 0.744153,
+      "total_ligations": 3549,
+      "correct_ligations": 2641,
+      "mismatch_ligations": 908,
+      "notes": ""
+    },
+    "TCCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 181,
+      "fidelity": 0.728362,
+      "total_ligations": 4506,
+      "correct_ligations": 3282,
+      "mismatch_ligations": 1224,
+      "notes": ""
+    },
+    "TCCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 145,
+      "fidelity": 0.771087,
+      "total_ligations": 3853,
+      "correct_ligations": 2971,
+      "mismatch_ligations": 882,
+      "notes": ""
+    },
+    "TCGA": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 72,
+      "fidelity": 0.863905,
+      "total_ligations": 1521,
+      "correct_ligations": 1314,
+      "mismatch_ligations": 207,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "TCGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 196,
+      "fidelity": 0.699039,
+      "total_ligations": 3954,
+      "correct_ligations": 2764,
+      "mismatch_ligations": 1190,
+      "notes": ""
+    },
+    "TCGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 176,
+      "fidelity": 0.73318,
+      "total_ligations": 4340,
+      "correct_ligations": 3182,
+      "mismatch_ligations": 1158,
+      "notes": ""
+    },
+    "TCGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 121,
+      "fidelity": 0.810409,
+      "total_ligations": 3766,
+      "correct_ligations": 3052,
+      "mismatch_ligations": 714,
+      "notes": ""
+    },
+    "TCTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 85,
+      "fidelity": 0.848853,
+      "total_ligations": 741,
+      "correct_ligations": 629,
+      "mismatch_ligations": 112,
+      "notes": ""
+    },
+    "TCTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 144,
+      "fidelity": 0.771709,
+      "total_ligations": 3662,
+      "correct_ligations": 2826,
+      "mismatch_ligations": 836,
+      "notes": ""
+    },
+    "TCTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 122,
+      "fidelity": 0.809847,
+      "total_ligations": 3534,
+      "correct_ligations": 2862,
+      "mismatch_ligations": 672,
+      "notes": ""
+    },
+    "TCTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 84,
+      "fidelity": 0.850244,
+      "total_ligations": 1843,
+      "correct_ligations": 1567,
+      "mismatch_ligations": 276,
+      "notes": ""
+    },
+    "TGAA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 43,
+      "fidelity": 0.901294,
+      "total_ligations": 1236,
+      "correct_ligations": 1114,
+      "mismatch_ligations": 122,
+      "notes": ""
+    },
+    "TGAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 226,
+      "fidelity": 0.614129,
+      "total_ligations": 4657,
+      "correct_ligations": 2860,
+      "mismatch_ligations": 1797,
+      "notes": ""
+    },
+    "TGAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 184,
+      "fidelity": 0.722484,
+      "total_ligations": 3607,
+      "correct_ligations": 2606,
+      "mismatch_ligations": 1001,
+      "notes": ""
+    },
+    "TGAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 206,
+      "fidelity": 0.67335,
+      "total_ligations": 4090,
+      "correct_ligations": 2754,
+      "mismatch_ligations": 1336,
+      "notes": ""
+    },
+    "TGCA": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 164,
+      "fidelity": 0.751084,
+      "total_ligations": 3459,
+      "correct_ligations": 2598,
+      "mismatch_ligations": 861,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "TGCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 232,
+      "fidelity": 0.580602,
+      "total_ligations": 5186,
+      "correct_ligations": 3011,
+      "mismatch_ligations": 2175,
+      "notes": ""
+    },
+    "TGCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 248,
+      "fidelity": 0.500172,
+      "total_ligations": 5812,
+      "correct_ligations": 2907,
+      "mismatch_ligations": 2905,
+      "notes": ""
+    },
+    "TGCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 236,
+      "fidelity": 0.561621,
+      "total_ligations": 5477,
+      "correct_ligations": 3076,
+      "mismatch_ligations": 2401,
+      "notes": ""
+    },
+    "TGGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 59,
+      "fidelity": 0.878824,
+      "total_ligations": 2517,
+      "correct_ligations": 2212,
+      "mismatch_ligations": 305,
+      "notes": ""
+    },
+    "TGGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 231,
+      "fidelity": 0.586754,
+      "total_ligations": 5360,
+      "correct_ligations": 3145,
+      "mismatch_ligations": 2215,
+      "notes": ""
+    },
+    "TGGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 221,
+      "fidelity": 0.627961,
+      "total_ligations": 4771,
+      "correct_ligations": 2996,
+      "mismatch_ligations": 1775,
+      "notes": ""
+    },
+    "TGGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 208,
+      "fidelity": 0.671273,
+      "total_ligations": 5500,
+      "correct_ligations": 3692,
+      "mismatch_ligations": 1808,
+      "notes": ""
+    },
+    "TGTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 77,
+      "fidelity": 0.856004,
+      "total_ligations": 2132,
+      "correct_ligations": 1825,
+      "mismatch_ligations": 307,
+      "notes": ""
+    },
+    "TGTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 211,
+      "fidelity": 0.661862,
+      "total_ligations": 5273,
+      "correct_ligations": 3490,
+      "mismatch_ligations": 1783,
+      "notes": ""
+    },
+    "TGTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 202,
+      "fidelity": 0.679689,
+      "total_ligations": 5145,
+      "correct_ligations": 3497,
+      "mismatch_ligations": 1648,
+      "notes": ""
+    },
+    "TGTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 158,
+      "fidelity": 0.757947,
+      "total_ligations": 3838,
+      "correct_ligations": 2909,
+      "mismatch_ligations": 929,
+      "notes": ""
+    },
+    "TTAA": {
+      "palindromic": true,
+      "self_complementary": true,
+      "fidelity_rank": 123,
+      "fidelity": 0.809524,
+      "total_ligations": 126,
+      "correct_ligations": 102,
+      "mismatch_ligations": 24,
+      "notes": "Self-complementary palindrome: the overhang can ligate to another copy of itself, so it must never be used as a junction in one-pot Golden Gate assembly. Its correct-ligation count is doubled in the source table because the self-pair appears twice in the matrix."
+    },
+    "TTAC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 61,
+      "fidelity": 0.876986,
+      "total_ligations": 2203,
+      "correct_ligations": 1932,
+      "mismatch_ligations": 271,
+      "notes": ""
+    },
+    "TTAG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 113,
+      "fidelity": 0.825555,
+      "total_ligations": 1307,
+      "correct_ligations": 1079,
+      "mismatch_ligations": 228,
+      "notes": ""
+    },
+    "TTAT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 103,
+      "fidelity": 0.8356,
+      "total_ligations": 809,
+      "correct_ligations": 676,
+      "mismatch_ligations": 133,
+      "notes": ""
+    },
+    "TTCA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 46,
+      "fidelity": 0.895498,
+      "total_ligations": 1244,
+      "correct_ligations": 1114,
+      "mismatch_ligations": 130,
+      "notes": ""
+    },
+    "TTCC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 90,
+      "fidelity": 0.844404,
+      "total_ligations": 3869,
+      "correct_ligations": 3267,
+      "mismatch_ligations": 602,
+      "notes": ""
+    },
+    "TTCG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 111,
+      "fidelity": 0.828373,
+      "total_ligations": 3461,
+      "correct_ligations": 2867,
+      "mismatch_ligations": 594,
+      "notes": ""
+    },
+    "TTCT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 58,
+      "fidelity": 0.879372,
+      "total_ligations": 1973,
+      "correct_ligations": 1735,
+      "mismatch_ligations": 238,
+      "notes": ""
+    },
+    "TTGA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 65,
+      "fidelity": 0.869444,
+      "total_ligations": 720,
+      "correct_ligations": 626,
+      "mismatch_ligations": 94,
+      "notes": ""
+    },
+    "TTGC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 114,
+      "fidelity": 0.822792,
+      "total_ligations": 3510,
+      "correct_ligations": 2888,
+      "mismatch_ligations": 622,
+      "notes": ""
+    },
+    "TTGG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 107,
+      "fidelity": 0.833813,
+      "total_ligations": 3129,
+      "correct_ligations": 2609,
+      "mismatch_ligations": 520,
+      "notes": ""
+    },
+    "TTGT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 67,
+      "fidelity": 0.866775,
+      "total_ligations": 1854,
+      "correct_ligations": 1607,
+      "mismatch_ligations": 247,
+      "notes": ""
+    },
+    "TTTA": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 95,
+      "fidelity": 0.842566,
+      "total_ligations": 343,
+      "correct_ligations": 289,
+      "mismatch_ligations": 54,
+      "notes": ""
+    },
+    "TTTC": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 83,
+      "fidelity": 0.851379,
+      "total_ligations": 2429,
+      "correct_ligations": 2068,
+      "mismatch_ligations": 361,
+      "notes": ""
+    },
+    "TTTG": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 92,
+      "fidelity": 0.843593,
+      "total_ligations": 2193,
+      "correct_ligations": 1850,
+      "mismatch_ligations": 343,
+      "notes": ""
+    },
+    "TTTT": {
+      "palindromic": false,
+      "self_complementary": false,
+      "fidelity_rank": 78,
+      "fidelity": 0.854954,
+      "total_ligations": 979,
+      "correct_ligations": 837,
+      "mismatch_ligations": 142,
+      "notes": ""
+    }
+  }
+}
