@@ -21,8 +21,8 @@ OUT.mkdir(exist_ok=True)
 
 SOFTWARE = "DMS Foundry 深度突变扫描文库设计与分析软件"
 SHORT = "DMS Foundry"
-VERSION = "V1.0"
-APPLICANT = "[著作权人]"
+VERSION = "V0.4.5"
+APPLICANT = "刘宇飞"
 DATE = "2026-10-31"
 
 LINES_PER_PAGE = 50

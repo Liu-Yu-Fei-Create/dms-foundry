@@ -24,3 +24,7 @@ exports/
 /tmp/
 *.log
 legal/software-copyright/out/
+
+# 含个人证件信息的本地文件，禁止入库
+legal/software-copyright/private*
+legal/software-copyright/applicant-private.md
