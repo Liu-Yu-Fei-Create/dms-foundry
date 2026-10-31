@@ -1,12 +1,21 @@
-# DMS Foundry
+<p align="center">
+  <img src="docs/icon.png" width="128" alt="DMS Foundry icon">
+</p>
 
-[![CI](https://github.com/Liu-Yu-Fei-Create/dms-foundry/actions/workflows/ci.yml/badge.svg)](https://github.com/Liu-Yu-Fei-Create/dms-foundry/actions/workflows/ci.yml)
+<h1 align="center">DMS Foundry</h1>
 
-**Deep mutational scanning (DMS) library design, QC and analysis — a native macOS app.**
+<p align="center">
+  <strong>Deep mutational scanning (DMS) library design, QC and analysis — a native macOS app.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Liu-Yu-Fei-Create/dms-foundry/actions/workflows/ci.yml"><img src="https://github.com/Liu-Yu-Fei-Create/dms-foundry/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/macOS-14%2B-black" alt="macOS 14+">
+  <img src="https://img.shields.io/badge/Swift-5.9%2B-orange" alt="Swift">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
+</p>
 
 一个 macOS 原生应用，覆盖 DMS 实验的四个环节：**文库设计 → 文库质控 → 筛选方案 → 筛选分析**。纯 Swift（SwiftUI + 无第三方依赖的 DMSEngine），黑白界面，支持深色模式。
-
-MIT 许可，见 [LICENSE](LICENSE)。
 
 > 命名：定名 DMS Foundry。`DMS Designer` 已被同领域 Python 工具包占用（[文档](https://jackdesmarais.github.io/DMS_Designer/index.html) / [仓库](https://github.com/jackdesmarais/DMS_Designer)），故避开。
 

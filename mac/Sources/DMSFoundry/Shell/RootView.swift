@@ -189,7 +189,9 @@ struct EmptyProjectView: View {
     @EnvironmentObject private var model: AppModel
     var body: some View {
         VStack(spacing: 16) {
-            Image(systemName: "square.and.pencil").font(.system(size: 42, weight: .light))
+            if let icon = NSApp.applicationIconImage {
+                Image(nsImage: icon).resizable().frame(width: 84, height: 84)
+            }
             Text(L("还没有打开的项目")).font(.title3)
             Text(L("新建一个项目，导入表达质粒，然后标注要突变的区段。"))
                 .foregroundStyle(.secondary)

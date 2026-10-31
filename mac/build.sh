@@ -20,6 +20,7 @@ for b in "$BIN"/*.bundle; do
   [ -e "$b" ] || continue
   cp -R "$b" "$APP/Contents/Resources/"
 done
+[ -f Resources/AppIcon.icns ] && cp Resources/AppIcon.icns "$APP/Contents/Resources/"
 
 PUBKEY=""
 [ -f ../server/keys/ed25519_pub.b64 ] && PUBKEY="$(cat ../server/keys/ed25519_pub.b64)"
@@ -34,6 +35,7 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
   <key>CFBundleIdentifier</key><string>org.dmsfoundry.app</string>
   <key>CFBundleExecutable</key><string>DMSFoundry</string>
   <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleIconFile</key><string>AppIcon</string>
   <key>CFBundleShortVersionString</key><string>__VERSION__</string>
   <key>CFBundleVersion</key><string>__BUILD__</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
