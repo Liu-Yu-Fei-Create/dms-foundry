@@ -595,8 +595,11 @@ struct AnalysisModuleView: View {
                 return
             }
             let specs = parsed.samples
-            var designs: [String: QCDesign] = [:]
-            for s in model.design()!.sublibraries { if let q = model.qcDesign(for: s.id) { designs[s.id] = q } }
+            let designs: [String: QCDesign] = Dictionary(uniqueKeysWithValues:
+                model.design()!.sublibraries.compactMap { s -> (String, QCDesign)? in
+                    guard let q = model.qcDesign(for: s.id) else { return nil }
+                    return (s.id, q)
+                })
             isRunning = true; errorText = nil
             let useFastp = FastpRunner.enabled
             Task.detached {
@@ -618,8 +621,9 @@ struct AnalysisModuleView: View {
                                                     replicate: spec.replicate, sublibrary: spec.sublibrary,
                                                     counts: res.counts, librarySize: res.anchoredReads))
                     }
+                    let collected = samples
                     await MainActor.run {
-                        finish(samples: samples)
+                        finish(samples: collected)
                         saveRun(title: "FASTQ \(url.lastPathComponent)")
                     }
                 } catch {

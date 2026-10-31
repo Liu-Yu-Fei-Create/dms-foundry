@@ -170,16 +170,17 @@ final class AppModel: ObservableObject {
     func beginMigration(to destination: URL) {
         migration = MigrationState(fraction: 0, text: "准备…", failed: nil)
         let source = AppPaths.root
-        Task.detached { [weak self] in
+        let model = self
+        Task.detached {
             do {
                 try DataMigration.migrate(from: source, to: destination) { fraction, text in
-                    Task { @MainActor [weak self] in
-                        self?.migration = MigrationState(fraction: fraction, text: text, failed: nil)
+                    Task { @MainActor in
+                        model.migration = MigrationState(fraction: fraction, text: text, failed: nil)
                     }
                 }
                 await MainActor.run {
                     AppPaths.setRoot(destination)
-                    self?.migration = MigrationState(fraction: 1, text: "完成，正在重启…", failed: nil)
+                    model.migration = MigrationState(fraction: 1, text: "完成，正在重启…", failed: nil)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         let cfg = NSWorkspace.OpenConfiguration()
                         NSWorkspace.shared.openApplication(at: Bundle.main.bundleURL,
@@ -189,7 +190,7 @@ final class AppModel: ObservableObject {
                     }
                 }
             } catch {
-                await MainActor.run { self?.migration?.failed = error.localizedDescription }
+                await MainActor.run { model.migration?.failed = error.localizedDescription }
             }
         }
     }

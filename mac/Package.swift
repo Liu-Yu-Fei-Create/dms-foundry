@@ -13,5 +13,6 @@ let package = Package(
         .target(name: "DMSEngine", resources: [.copy("Resources")]),
         .executableTarget(name: "DMSFoundry", dependencies: ["DMSEngine"], resources: [.copy("Resources")]),
         .testTarget(name: "DMSEngineTests", dependencies: ["DMSEngine"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )

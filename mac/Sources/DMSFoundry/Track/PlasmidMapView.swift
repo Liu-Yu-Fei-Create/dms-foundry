@@ -142,8 +142,9 @@ struct PlasmidMapView: View {
     }
 
     private func point(center: CGPoint, radius: CGFloat, degrees: Double) -> CGPoint {
-        let r = degrees * .pi / 180
-        return CGPoint(x: center.x + radius * cos(r), y: center.y + radius * sin(r))
+        let r = degrees * Double.pi / 180
+        return CGPoint(x: center.x + radius * CGFloat(cos(r)),
+                       y: center.y + radius * CGFloat(sin(r)))
     }
 
     private func tickStep(for n: Int) -> Int {
