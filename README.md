@@ -17,8 +17,6 @@
 
 一个 macOS 原生应用，覆盖 DMS 实验的四个环节：**文库设计 → 文库质控 → 筛选方案 → 筛选分析**。纯 Swift（SwiftUI + 无第三方依赖的 DMSEngine），黑白界面，支持深色模式。
 
-> 命名：定名 DMS Foundry。`DMS Designer` 已被同领域 Python 工具包占用（[文档](https://jackdesmarais.github.io/DMS_Designer/index.html) / [仓库](https://github.com/jackdesmarais/DMS_Designer)），故避开。
-
 ## 下载
 
 **➡️ [下载最新版](https://github.com/Liu-Yu-Fei-Create/dms-foundry/releases/latest)**
