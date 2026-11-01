@@ -2,11 +2,42 @@ import SwiftUI
 import Foundation
 import DMSEngine
 
+final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        AppDelegate.ensureMainWindow()
+        return true
+    }
+
+    static func ensureMainWindow() {
+        if NSApp.windows.contains(where: { $0.isVisible && $0.title.contains("DMS Foundry") && !$0.title.contains("设置") }) {
+            NSApp.windows.first(where: { $0.isVisible && $0.title.contains("DMS Foundry") && !$0.title.contains("设置") })?.makeKeyAndOrderFront(nil)
+            return
+        }
+        if let item = findMenuItem("显示主窗口"), let action = item.action {
+            NSApp.sendAction(action, to: item.target, from: item)
+        }
+    }
+
+    static func findMenuItem(_ title: String) -> NSMenuItem? {
+        func search(_ menu: NSMenu?) -> NSMenuItem? {
+            guard let menu else { return nil }
+            for item in menu.items {
+                if item.title == title { return item }
+                if let sub = item.submenu, let found = search(sub) { return found }
+            }
+            return nil
+        }
+        return search(NSApp.mainMenu)
+    }
+}
+
 @main
 struct DMSFoundryApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var model = AppModel()
     @ObservedObject private var l10n = L10n.shared
     @ObservedObject private var appearance = AppearanceController.shared
+    @Environment(\.openWindow) private var openWindow
 
     init() {
         // QC 引擎自检：合成 FASTQ → 计数 → 对账
@@ -221,7 +252,7 @@ struct DMSFoundryApp: App {
                 .preferredColorScheme(AppearanceController.shared.mode.colorScheme)
         }
 
-        WindowGroup {
+        WindowGroup(id: "main") {
             RootView().environmentObject(model)
                 .frame(minWidth: 1100, minHeight: 720)
         }
@@ -257,6 +288,8 @@ struct DMSFoundryApp: App {
                 }.keyboardShortcut("u")
             }
             CommandGroup(replacing: .newItem) {
+                Button(L("显示主窗口")) { openWindow(id: "main") }
+                    .keyboardShortcut("0")
                 Button(L("新建项目")) { model.showNewProject = true }.keyboardShortcut("n")
                 Button(L("载入示例（TEM-1）")) { model.loadSample() }
                     .keyboardShortcut("l")

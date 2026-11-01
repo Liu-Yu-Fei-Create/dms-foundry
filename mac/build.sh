@@ -40,6 +40,7 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
   <key>CFBundleVersion</key><string>__BUILD__</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>NSHighResolutionCapable</key><true/>
+  <key>NSQuitAlwaysKeepsWindows</key><false/>
   <key>CFBundleDevelopmentRegion</key><string>zh_CN</string>
   <key>CFBundleLocalizations</key><array><string>zh_CN</string><string>en</string></array>
   <key>NSPrincipalClass</key><string>NSApplication</string>
