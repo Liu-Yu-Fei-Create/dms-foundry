@@ -1,7 +1,5 @@
 # DMS Foundry · 深度突变扫描（DMS）序列文库设计
 
-> 命名记录：原名占位 `Mutalib`，2026-10 定为 **DMS Foundry**。定名前核查过重名——`DMS Designer` 已被 John J. Desmarais 的 Python 工具包占用（同名同领域，[文档](https://jackdesmarais.github.io/DMS_Designer/index.html) / [仓库](https://github.com/jackdesmarais/DMS_Designer)），故避开；`DMS Foundry` 在 PyPI（dms-foundry / dmsfoundry / dms_foundry）均为 404，GitHub 无同领域命中。
-
 从父序列起，把一次深度突变扫描设计到可以下单。视觉身份是**严格黑白**——零彩色、零圆角、零阴影；状态只靠形状、字重、灰阶和删除线区分，**下划线只留给链接**。
 
 ## 打开
